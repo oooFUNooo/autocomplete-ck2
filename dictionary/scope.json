@@ -1,0 +1,1328 @@
+{
+	"simple": [
+		{
+			"text": "any_allied_character",
+			"displayText": "any_allied_character",
+			"description": "Scopes to all allies. Expensive calculation, use with care [Character]"
+		},
+		{
+			"text": "any_artifact_owner",
+			"displayText": "any_artifact_owner",
+			"description": "Scopes to anyone who has ever owned the artifact, including the current owner. Does not work on artifacts that have the history = no parameter. [Artifact]"
+		},
+		{
+			"text": "any_attacker",
+			"displayText": "any_attacker",
+			"description": "Scopes to all attackers in a war [War]"
+		},
+		{
+			"text": "any_backed_character",
+			"displayText": "any_backed_character",
+			"description": "Scopes to all characters whose plots a character is supporting [Character]"
+		},
+		{
+			"text": "any_bloodline_member",
+			"displayText": "any_bloodline_member",
+			"description": "Scopes to all members of the current bloodline [Bloodline]"
+		},
+		{
+			"text": "any_character",
+			"displayText": "any_character",
+			"description": "Scopes to all characters, except for offmap rulers. WARNING CPU HEAVY [Any]"
+		},
+		{
+			"text": "any_child any_child_even_if_dead",
+			"displayText": "any_child any_child_even_if_dead",
+			"description": "Scopes to all of a character's children [Character]"
+		},
+		{
+			"text": "any_claimant",
+			"displayText": "any_claimant",
+			"description": "Scopes to all claimants of a title [Title]"
+		},
+		{
+			"text": "any_close_relative",
+			"displayText": "any_close_relative",
+			"description": "Scopes to all living close relatives of a character. Includes anyone with a \"red blood\" icon in their dynasty (siblings, children, grandchildren, parents, grandparents, etc.), as well as bastards of their closest relatives. Does not include spouse. [Character]"
+		},
+		{
+			"text": "any_courtier",
+			"displayText": "any_courtier",
+			"description": "Scopes to everyone in the same court as the character. Note that it will match prisoners (even if foreign) and councillors (even if landed). If used for a ruler who is a councilor, it will check their liege's court instead of their own! [Character]"
+		},
+		{
+			"text": "any_courtier_or_vassal",
+			"displayText": "any_courtier_or_vassal",
+			"description": "Primarily used to find minor title holders: any_courtier_or_vassal = { has_minor_title = title_court_physician liege = { character = PREVPREV } }For direct subjects including courtiers abroad, you must use the inefficient any_character scope instead: any_character = { independent = no liege = { character = PREVPREV } } [Character]"
+		},
+		{
+			"text": "any_current_enemy",
+			"displayText": "any_current_enemy",
+			"description": "Scopes to all characters actively at war with a character. Both characters have to be participating directly in the war, not as vassals [Character]"
+		},
+		{
+			"text": "any_de_jure_vassal",
+			"displayText": "any_de_jure_vassal",
+			"description": "Scopes to all de jure vassals of a character or title. [Character, Title]"
+		},
+		{
+			"text": "any_defender",
+			"displayText": "any_defender",
+			"description": "Scopes to all defenders in a war [War]"
+		},
+		{
+			"text": "any_dynasty_member any_dynasty_member_even_if_dead",
+			"displayText": "any_dynasty_member any_dynasty_member_even_if_dead",
+			"description": "Scopes to all members of a character's dynasty. [Character]"
+		},
+		{
+			"text": "any_enemy_plotter",
+			"displayText": "any_enemy_plotter",
+			"description": "Scopes to any character (known/unknown) plotting against the character in scope [Character]"
+		},
+		{
+			"text": "any_faction_backer",
+			"displayText": "any_faction_backer",
+			"description": "Scopes to faction members. Faction field can be used to specify faction (ex: faction = faction_lower_tribal_organization) [Character]"
+		},
+		{
+			"text": "any_favor_holder",
+			"displayText": "any_favor_holder",
+			"description": "Scopes to all characters to which a character owes a favor [Character]"
+		},
+		{
+			"text": "any_favor_ower",
+			"displayText": "any_favor_ower",
+			"description": "Scopes to all characters that owe a favor to the character [Character]"
+		},
+		{
+			"text": "any_friend",
+			"displayText": "any_friend",
+			"description": "Scopes to all of a character's friends [Character]"
+		},
+		{
+			"text": "any_host_courtier",
+			"displayText": "any_host_courtier",
+			"description": "Scopes to all characters in the same court. Shorter version of host = { any_courtier = { ... } } [Any]"
+		},
+		{
+			"text": "any_independent_ruler",
+			"displayText": "any_independent_ruler",
+			"description": "Scopes to all independent rulers. Doesn't include ROOT. Excludes revolts: to include them, use a broader scope with limit = { liege = { character = PREV } } . [Any]"
+		},
+		{
+			"text": "any_known_enemy_plotter",
+			"displayText": "any_known_enemy_plotter",
+			"description": "Scopes to any known character plotting against the character in scope [Character]"
+		},
+		{
+			"text": "any_known_plotter",
+			"displayText": "any_known_plotter",
+			"description": "Scopes to any plotter character whose plot the character in scope knows about [Character]"
+		},
+		{
+			"text": "any_liege",
+			"displayText": "any_liege",
+			"description": "Scopes to all lieges a character has, regardless of how many tiers above. This includes liege and top_liege scopes. [Character]"
+		},
+		{
+			"text": "any_lover",
+			"displayText": "any_lover",
+			"description": "Scopes to all lovers a character has [Character]"
+		},
+		{
+			"text": "any_neighbor_independent_ruler",
+			"displayText": "any_neighbor_independent_ruler",
+			"description": "Scopes to all independent rulers whose realm neighbors the realm you are in. [Character]"
+		},
+		{
+			"text": "any_non_aggression_pact_character",
+			"displayText": "any_non_aggression_pact_character",
+			"description": "Scopes to all characters to which someone has a non-aggression pact [Character]"
+		},
+		{
+			"text": "any_opinion_modifier_target",
+			"displayText": "any_opinion_modifier_target",
+			"description": "Scopes to all characters having an opinion modifier toward scoped character [code] [Character]"
+		},
+		{
+			"text": "any_playable_ruler",
+			"displayText": "any_playable_ruler",
+			"description": "Scopes to all playable rulers currently alive. Combined with limit = { ai = no } , it allows to broadcast events to human players. [Any]"
+		},
+		{
+			"text": "any_player",
+			"displayText": "any_player",
+			"description": "Scopes to all players. [Any]"
+		},
+		{
+			"text": "any_plot_backer",
+			"displayText": "any_plot_backer",
+			"description": "Scopes to everyone backing the character's plot [Character]"
+		},
+		{
+			"text": "any_plotter",
+			"displayText": "any_plotter",
+			"description": "Scopes to all plotters (anywhere?). Vanilla usage uses \"target = ROOT\" on the first line of the scope to limit the search. (?) [code] [Character]"
+		},
+		{
+			"text": "any_previous_holder",
+			"displayText": "any_previous_holder",
+			"description": "Scopes to previous holders of a title [Title]"
+		},
+		{
+			"text": "any_province_character",
+			"displayText": "any_province_character",
+			"description": "Scopes to all characters in the province [Province]"
+		},
+		{
+			"text": "any_province_lord",
+			"displayText": "any_province_lord",
+			"description": "Scopes to all landed characters in the province [Province]"
+		},
+		{
+			"text": "any_pupil",
+			"displayText": "any_pupil",
+			"description": "Scopes to all characters that the scope is educating. [Character]"
+		},
+		{
+			"text": "any_quester",
+			"displayText": "any_quester",
+			"description": "Scopes to all characters with a quest. [Any]"
+		},
+		{
+			"text": "any_quester_targeting_this any_quester_targetting_this",
+			"displayText": "any_quester_targeting_this any_quester_targetting_this",
+			"description": "Scopes to all characters with a quest targeting the current scope. [Character, Title, Province]"
+		},
+		{
+			"text": "any_quest_target",
+			"displayText": "any_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "any_realm_character",
+			"displayText": "any_realm_character",
+			"description": "Scopes to all characters within the current character or title's sub-realm. Includes both vassals and courtiers, but not the liege of the realm. Like any_courtier, it does not include prisoners abroad. [Character, title]"
+		},
+		{
+			"text": "any_realm_lord",
+			"displayText": "any_realm_lord",
+			"description": "Scopes to all landed characters within the current character's realm. It doesn't include the liege of the realm. [Character]"
+		},
+		{
+			"text": "any_rival",
+			"displayText": "any_rival",
+			"description": "Scopes to all of a character's rivals [Character]"
+		},
+		{
+			"text": "any_sibling any_sibling_even_if_dead",
+			"displayText": "any_sibling any_sibling_even_if_dead",
+			"description": "Scopes to all of a character's siblings [Character]"
+		},
+		{
+			"text": "any_society_member",
+			"displayText": "any_society_member",
+			"description": "Scopes to all members of the society. Note: if current scope is not a society, will scope to all characters in any society (?). [Society, Any]"
+		},
+		{
+			"text": "any_spouse any_spouse_even_if_dead",
+			"displayText": "any_spouse any_spouse_even_if_dead",
+			"description": "Scopes to all of a character's spouses [Character]"
+		},
+		{
+			"text": "any_consort",
+			"displayText": "any_consort",
+			"description": "Scopes to all of a character's consorts (not only concubines, works for both genders) [Character]"
+		},
+		{
+			"text": "any_suzerain",
+			"displayText": "any_suzerain",
+			"description": " [Character]"
+		},
+		{
+			"text": "any_tributary",
+			"displayText": "any_tributary",
+			"description": "Scopes to all tributaries of the scope [Character]"
+		},
+		{
+			"text": "any_unit_leader",
+			"displayText": "any_unit_leader",
+			"description": "Scopes to all leaders (flank or subunit) in a unit scope. In character uses the unit that character is in. If the unit is in combat, every unit on the same side in the battle is included. [Character, Unit]"
+		},
+		{
+			"text": "any_unique_dynasty_vassal",
+			"displayText": "any_unique_dynasty_vassal",
+			"description": "Scopes to vassals with different dynasties (excluding dynasty of scoped character). [Character]"
+		},
+		{
+			"text": "any_unknown_enemy_plotter",
+			"displayText": "any_unknown_enemy_plotter",
+			"description": "Only scopes to the plotters of the Character in scope that are unknown [Character]"
+		},
+		{
+			"text": "any_vassal",
+			"displayText": "any_vassal",
+			"description": "Scopes to all direct vassals of a character or title. Does not include courtiers. To scope to all vassals (direct or not) consider using any_realm_character . [Character, Title]"
+		},
+		{
+			"text": "any_voter",
+			"displayText": "any_voter",
+			"description": "Scopes to all voters in a character's council [Character]"
+		},
+		{
+			"text": "any_ward",
+			"displayText": "any_ward",
+			"description": "Scopes to all of a character's wards [Character]"
+		},
+		{
+			"text": "artifact_owner",
+			"displayText": "artifact_owner",
+			"description": "Scopes to all the artifact's owner [Artifact]"
+		},
+		{
+			"text": "attacker",
+			"displayText": "attacker",
+			"description": "Scopes to the aggressor in a war [War]"
+		},
+		{
+			"text": "band_creator",
+			"displayText": "band_creator",
+			"description": "Scopes to the creator of a dynamic mercenary band. [Title]"
+		},
+		{
+			"text": "best_crusade_claimant",
+			"displayText": "best_crusade_claimant",
+			"description": "Scopes to the best claimant for that title in context of crusade [Title]"
+		},
+		{
+			"text": "best_fit_character_for_title",
+			"displayText": "best_fit_character_for_title",
+			"description": "Scopes to a character who should get a chosen title, from a chosen character's perspective. Parameters: title, perspective (from whose perspective we are viewing the title), index (The index of the character in the list) [code] [?]"
+		},
+		{
+			"text": "betrothed",
+			"displayText": "betrothed",
+			"description": "Scopes to the character who the current scoped character is betrothed to. [Character]"
+		},
+		{
+			"text": "biggest_realm_size_relative",
+			"displayText": "biggest_realm_size_relative",
+			"description": "Scopes to relatives with biggest realm size. [Character]"
+		},
+		{
+			"text": "center_flank_leader",
+			"displayText": "center_flank_leader",
+			"description": "Scopes to the central flank leader of an army [Character]"
+		},
+		{
+			"text": "left_flank_leader",
+			"displayText": "left_flank_leader",
+			"description": "Scopes to the left flank leader of an army [Character]"
+		},
+		{
+			"text": "right_flank_leader",
+			"displayText": "right_flank_leader",
+			"description": "Scopes to the right flank leader of an army [Character]"
+		},
+		{
+			"text": "controller",
+			"displayText": "controller",
+			"description": "Scopes to the character controlling a barony. Rarely used, more generic scope owner being favored. [Title (barony or county)]"
+		},
+		{
+			"text": "current_heir",
+			"displayText": "current_heir",
+			"description": "Scopes to the character's heir. This is the character who inherits the primary title, regardless if he is dynastic heir or not. [Character]"
+		},
+		{
+			"text": "defender",
+			"displayText": "defender",
+			"description": "Scopes to the defender in a war [War]"
+		},
+		{
+			"text": "dynasty_head",
+			"displayText": "dynasty_head",
+			"description": "Scopes to the head of the dynasty [Character]"
+		},
+		{
+			"text": "educator",
+			"displayText": "educator",
+			"description": "Scopes to the educator of a child (Conclave DLC education) [Character]"
+		},
+		{
+			"text": "employer",
+			"displayText": "employer",
+			"description": "Scopes to the character's employer. Only works for landless characters, as landed rulers are considered their own employer, even if they work on their liege council. [Character]"
+		},
+		{
+			"text": "enemy",
+			"displayText": "enemy",
+			"description": "Scopes to the enemy in a siege [Siege]"
+		},
+		{
+			"text": "father father_even_if_dead",
+			"displayText": "father father_even_if_dead",
+			"description": "Scopes to the character's father [Character]"
+		},
+		{
+			"text": "father_of_unborn",
+			"displayText": "father_of_unborn",
+			"description": "Scopes to the unborn child's father [Character]"
+		},
+		{
+			"text": "founder",
+			"displayText": "founder",
+			"description": "Scopes to the founder of the current bloodline [Bloodline]"
+		},
+		{
+			"text": "guardian",
+			"displayText": "guardian",
+			"description": "Scopes to the child's guardian [Character]"
+		},
+		{
+			"text": "governor",
+			"displayText": "governor",
+			"description": "Scopes to the governor of the scope's offmap power. Scope can be the offmap power itself, the offmap power ruler, or the governor title. [Offmap Power, Character, Title]"
+		},
+		{
+			"text": "heir_under_seniority_law",
+			"displayText": "heir_under_seniority_law",
+			"description": "Scopes to the character who'd be heir if Seniority succession was enacted [Title]"
+		},
+		{
+			"text": "heir_under_primogeniture_law",
+			"displayText": "heir_under_primogeniture_law",
+			"description": "Scopes to the character who'd be heir if Primogeniture succession was enacted [Title]"
+		},
+		{
+			"text": "highest_ranked_relative",
+			"displayText": "highest_ranked_relative",
+			"description": "Scopes to relatives with highest feudal tier [Character]"
+		},
+		{
+			"text": "holder_scope",
+			"displayText": "holder_scope",
+			"description": "Scopes to the owner of the province or title [Title, Province]"
+		},
+		{
+			"text": "hospital_owner",
+			"displayText": "hospital_owner",
+			"description": " [Province(?)]"
+		},
+		{
+			"text": "host",
+			"displayText": "host",
+			"description": "Scopes to the owner of where the character resides. Works both for landed and unlanded characters. If character is residing at court, the host would be the liege. For an imprisoned character, this yields their jailer. [Character]"
+		},
+		{
+			"text": "job_chancellor",
+			"displayText": "job_chancellor",
+			"description": "Scopes to the character's current Chancellor, if they have one. [Character]"
+		},
+		{
+			"text": "job_marshal",
+			"displayText": "job_marshal",
+			"description": "Scopes to the character's current Marshal, if they have one. [Character]"
+		},
+		{
+			"text": "job_treasurer",
+			"displayText": "job_treasurer",
+			"description": "Scopes to the character's current Steward, if they have one. \"Beware\", it's \"treasurer\", not \"steward\"! [Character]"
+		},
+		{
+			"text": "job_spymaster",
+			"displayText": "job_spymaster",
+			"description": "Scopes to the character's current Spymaster, if they have one. [Character]"
+		},
+		{
+			"text": "job_spiritual",
+			"displayText": "job_spiritual",
+			"description": "Scopes to the character's current Chaplain, if they have one. [Character]"
+		},
+		{
+			"text": "killer",
+			"displayText": "killer",
+			"description": "Scopes to the killer of a character [Character]"
+		},
+		{
+			"text": "leader",
+			"displayText": "leader",
+			"description": "Scopes to the leader of a force in a siege [Siege]"
+		},
+		{
+			"text": "liege",
+			"displayText": "liege",
+			"description": "Scopes to a character's direct liege [Character]"
+		},
+		{
+			"text": "liege_before_war",
+			"displayText": "liege_before_war",
+			"description": "Scopes to whoever was the character's liege before his rebellion [Character]"
+		},
+		{
+			"text": "lover",
+			"displayText": "lover",
+			"description": "Scopes to the character's lover [Character]"
+		},
+		{
+			"text": "mercenary_employer",
+			"displayText": "mercenary_employer",
+			"description": " [Character]"
+		},
+		{
+			"text": "most_participating_attacker",
+			"displayText": "most_participating_attacker",
+			"description": "Scopes to the attacker that's done the most in a war [War]"
+		},
+		{
+			"text": "most_participating_crusader",
+			"displayText": "most_participating_crusader",
+			"description": "Scopes to the non-theocracy attacker that's done the most in a war [War]"
+		},
+		{
+			"text": "most_participating_defender",
+			"displayText": "most_participating_defender",
+			"description": "Scopes to the defender that's done the most in a war [War]"
+		},
+		{
+			"text": "most_popular_vassal",
+			"displayText": "most_popular_vassal",
+			"description": "Scopes to a the most popular vassal who meets its limit clause. Seems to use an average of opinion among all vassals (including mayors). Used to determine the new ruler when the \"Oust ruler\" faction is successful. [Character]"
+		},
+		{
+			"text": "most_prestigious_clan_vassal",
+			"displayText": "most_prestigious_clan_vassal",
+			"description": " [Character]"
+		},
+		{
+			"text": "mother",
+			"displayText": "mother",
+			"description": "Scopes to the character's mother [Character]"
+		},
+		{
+			"text": "mother_even_if_dead",
+			"displayText": "mother_even_if_dead",
+			"description": "Scopes to the character's mother, even if she's dead [Character]"
+		},
+		{
+			"text": "new_character",
+			"displayText": "new_character",
+			"description": "Scopes to the character previously created in the event, via create_character or similar command. [Any]"
+		},
+		{
+			"text": "offmap_prev_ruler",
+			"displayText": "offmap_prev_ruler",
+			"description": "Scopes to the previous ruler of the scope's offmap power. Scope can be the offmap power itself, the current offmap power ruler, the governor, or the governor title. [Offmap Power, Character, Title]"
+		},
+		{
+			"text": "offmap_ruler",
+			"displayText": "offmap_ruler",
+			"description": "Scopes to the ruler of the scope's offmap power. Scope can be the offmap power itself, the governor, or the governor title. [Offmap Power, Character, Title]"
+		},
+		{
+			"text": "original_artifact_owner original_owner",
+			"displayText": "original_artifact_owner original_owner",
+			"description": "Scopes to the original owner of the artifact. Both scopes function identically. [Artifact]"
+		},
+		{
+			"text": "owner",
+			"displayText": "owner",
+			"description": "Scopes to the owner of the province, title, or artifact [Title, Province, Artifact]"
+		},
+		{
+			"text": "parent_religion_head",
+			"displayText": "parent_religion_head",
+			"description": "Scopes to the religion head of the parent religion [Character, Province]"
+		},
+		{
+			"text": "player_heir",
+			"displayText": "player_heir",
+			"description": "Scopes to the scope's heir as listed on the character sheet (i.e. the character you would be playing if you were playing the scope and the scope died) rather than the heir to the primary title of the scope. [Character]"
+		},
+		{
+			"text": "plot_target_char",
+			"displayText": "plot_target_char",
+			"description": "Scopes to the character that's being plotted against [Character]"
+		},
+		{
+			"text": "preferred_war_target",
+			"displayText": "preferred_war_target",
+			"description": "Scopes to the character's attack target [Character]"
+		},
+		{
+			"text": "previous_artifact_owner",
+			"displayText": "previous_artifact_owner",
+			"description": "Scopes to the previous owner of the artifact. Does not work on artifacts that have the history = no parameter. [Artifact]"
+		},
+		{
+			"text": "quest_target",
+			"displayText": "quest_target",
+			"description": "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest. [Character]"
+		},
+		{
+			"text": "random_allied_character",
+			"displayText": "random_allied_character",
+			"description": "Scopes to an ally [Character]"
+		},
+		{
+			"text": "random_artifact_owner",
+			"displayText": "random_artifact_owner",
+			"description": "Scopes to a random character from those who have ever owned the artifact, including the current owner. Does not work on artifacts that have the history = no parameter. [Artifact]"
+		},
+		{
+			"text": "random_backed_character",
+			"displayText": "random_backed_character",
+			"description": "Scopes to a random character the character is backing. Cannot be used as a trigger [Character]"
+		},
+		{
+			"text": "random_bloodline_member",
+			"displayText": "random_bloodline_member",
+			"description": "Scopes to a random member of the current bloodline [Bloodline]"
+		},
+		{
+			"text": "random_character",
+			"displayText": "random_character",
+			"description": "Scopes a random character in the game, excluding offmap rulers. Cannot be used as a trigger. Note: This scope doesn't apply commands to ROOT . [Any]"
+		},
+		{
+			"text": "random_child random_child_even_if_dead",
+			"displayText": "random_child random_child_even_if_dead",
+			"description": "Scopes to a random child of the character. Cannot be used as a trigger [Character]"
+		},
+		{
+			"text": "random_close_relative",
+			"displayText": "random_close_relative",
+			"description": "Scopes to a random close relative of the character. [Character]"
+		},
+		{
+			"text": "random_courtier",
+			"displayText": "random_courtier",
+			"description": "Scopes to a random courtier of the character, including prisoners. Cannot be used as a trigger. [Character]"
+		},
+		{
+			"text": "random_courtier_or_vassal",
+			"displayText": "random_courtier_or_vassal",
+			"description": "Scopes to a random courtier or vassal of the character. Cannot be used as a trigger. [Character]"
+		},
+		{
+			"text": "random_current_enemy",
+			"displayText": "random_current_enemy",
+			"description": "Scopes to a random enemy of the character. Both characters must be participating directly in the war, not as vassals. [Character]"
+		},
+		{
+			"text": "random_dynasty_member random_dynasty_member_even_if_dead",
+			"displayText": "random_dynasty_member random_dynasty_member_even_if_dead",
+			"description": "Scopes to a random member of the character's dynasty. [Character]"
+		},
+		{
+			"text": "random_enemy_plotter",
+			"displayText": "random_enemy_plotter",
+			"description": " [Character]"
+		},
+		{
+			"text": "random_friend",
+			"displayText": "random_friend",
+			"description": "Scopes to a random friend of the character. [Character]"
+		},
+		{
+			"text": "random_host_courtier",
+			"displayText": "random_host_courtier",
+			"description": "Scopes to a random character in the same court. Shorter version of host = { random_courtier = { ... } } [Any]"
+		},
+		{
+			"text": "random_independent_ruler",
+			"displayText": "random_independent_ruler",
+			"description": "Scopes to a random independent ruler. Doesn't include ROOT . [Any]"
+		},
+		{
+			"text": "random_known_enemy_plotter",
+			"displayText": "random_known_enemy_plotter",
+			"description": " [Character]"
+		},
+		{
+			"text": "random_lover",
+			"displayText": "random_lover",
+			"description": "Scopes to a random lover. [Character]"
+		},
+		{
+			"text": "random_neighbor_independent_ruler",
+			"displayText": "random_neighbor_independent_ruler",
+			"description": "Scopes to a random independent ruler whose realm neighbors the realm you are in. [Character]"
+		},
+		{
+			"text": "random_non_aggression_pact_character",
+			"displayText": "random_non_aggression_pact_character",
+			"description": "Scopes to a random character with a non-aggression pact toward current character. [Character]"
+		},
+		{
+			"text": "random_opinion_modifier_target",
+			"displayText": "random_opinion_modifier_target",
+			"description": "Scopes to a random character with an opinion modifier toward scoped character [Character]"
+		},
+		{
+			"text": "random_playable_ruler",
+			"displayText": "random_playable_ruler",
+			"description": "Scopes to a random playable ruler. [Any]"
+		},
+		{
+			"text": "random_player",
+			"displayText": "random_player",
+			"description": "Scopes to a random player. [Any]"
+		},
+		{
+			"text": "random_province_character",
+			"displayText": "random_province_character",
+			"description": "Scopes to a random character in the province. [Province]"
+		},
+		{
+			"text": "random_province_lord",
+			"displayText": "random_province_lord",
+			"description": "Scopes to a random landed character in the province. [Province]"
+		},
+		{
+			"text": "random_pupil",
+			"displayText": "random_pupil",
+			"description": "Scopes to a random character that the scope is educating. [Character]"
+		},
+		{
+			"text": "random_quester",
+			"displayText": "random_quester",
+			"description": "Scopes to a random character with a quest. [Any]"
+		},
+		{
+			"text": "random_quester_targetting_this",
+			"displayText": "random_quester_targetting_this",
+			"description": "Scopes to a random character with a quest targeting the current scope. [Character, Title, Province]"
+		},
+		{
+			"text": "random_quest_target",
+			"displayText": "random_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "random_realm_character",
+			"displayText": "random_realm_character",
+			"description": "Scopes to a random character in the character or title's realm. [Character, title]"
+		},
+		{
+			"text": "random_realm_lord",
+			"displayText": "random_realm_lord",
+			"description": "Scopes to a random landed character in the character or title's realm. [Character, title]"
+		},
+		{
+			"text": "random_rival",
+			"displayText": "random_rival",
+			"description": "Scopes to a random rival of the character. [Character]"
+		},
+		{
+			"text": "random_sibling random_sibling_even_if_dead",
+			"displayText": "random_sibling random_sibling_even_if_dead",
+			"description": "Scopes to a random sibling of the character. [Character]"
+		},
+		{
+			"text": "random_society_member",
+			"displayText": "random_society_member",
+			"description": "Scopes to a random member of the society. Note: if current scope is not a society, will scope to a random character that is in any society (?). [Society, Any]"
+		},
+		{
+			"text": "random_spouse random_spouse_even_if_dead",
+			"displayText": "random_spouse random_spouse_even_if_dead",
+			"description": "Scopes to a random spouse of the character. [Character]"
+		},
+		{
+			"text": "random_consort",
+			"displayText": "random_consort",
+			"description": "Scopes to a random consort of the character (not only concubines, works for both genders). [Character]"
+		},
+		{
+			"text": "random_tributary",
+			"displayText": "random_tributary",
+			"description": "Scopes to all tributaries of the scope [Character]"
+		},
+		{
+			"text": "random_unit_leader",
+			"displayText": "random_unit_leader",
+			"description": "Scopes to a random leader (flank or subunit) in a unit scope. In character uses the unit that character is in. If the unit is in combat, every unit on the same side in the battle is included. [Character, Unit]"
+		},
+		{
+			"text": "random_unknown_enemy_plotter",
+			"displayText": "random_unknown_enemy_plotter",
+			"description": " [Character]"
+		},
+		{
+			"text": "random_vassal",
+			"displayText": "random_vassal",
+			"description": "Scopes to a random vassal of the character or title. [Character, Title]"
+		},
+		{
+			"text": "random_voter",
+			"displayText": "random_voter",
+			"description": "Scopes to a random voter on the council [Character]"
+		},
+		{
+			"text": "random_ward",
+			"displayText": "random_ward",
+			"description": "Scopes to a random ward of the character. [Character]"
+		},
+		{
+			"text": "real_father real_father_even_if_dead",
+			"displayText": "real_father real_father_even_if_dead",
+			"description": "Scopes to the character's real father, if the character's known father is not their genetic parent. This will select the genetic parent even if the cuckolding is unknown. If character's known father is their actual father, produces no result. See true_father or true_father_even_if_dead if you would prefer to return the actual father every time. [Character]"
+		},
+		{
+			"text": "reincarnation_scope",
+			"displayText": "reincarnation_scope",
+			"description": "Scopes to the character that currently scoped character is the reincarnation of [Character]"
+		},
+		{
+			"text": "regent",
+			"displayText": "regent",
+			"description": "Scopes to the character's regent [Character]"
+		},
+		{
+			"text": "religion_head",
+			"displayText": "religion_head",
+			"description": "Scopes to the character's religious head(s). Does NOT includes antipopes [Character, Province]"
+		},
+		{
+			"text": "rightful_religious_head_scope",
+			"displayText": "rightful_religious_head_scope",
+			"description": "Scopes to the character's rightful religious head. Includes antipopes [Character]"
+		},
+		{
+			"text": "ruler",
+			"displayText": "ruler",
+			"description": "Scopes to the province's owner. Rarely used, owner being preferred. [Province]"
+		},
+		{
+			"text": "spouse",
+			"displayText": "spouse",
+			"description": "Scopes to the character's primary spouse [Character]"
+		},
+		{
+			"text": "spouse_even_if_dead",
+			"displayText": "spouse_even_if_dead",
+			"description": "Scopes to the character's primary spouse, even if dead [Character]"
+		},
+		{
+			"text": "strongest_clan_vassal",
+			"displayText": "strongest_clan_vassal",
+			"description": " [Character]"
+		},
+		{
+			"text": "supported_claimant",
+			"displayText": "supported_claimant",
+			"description": " [Character]"
+		},
+		{
+			"text": "suzerain",
+			"displayText": "suzerain",
+			"description": "Scopes to the suzerain of a tributary character [Character]"
+		},
+		{
+			"text": "title_to_get_rid_of",
+			"displayText": "title_to_get_rid_of",
+			"description": "Scopes to titles over the demesne limit [Title]"
+		},
+		{
+			"text": "top_liege",
+			"displayText": "top_liege",
+			"description": "Scopes to a character's independent liege [Character]"
+		},
+		{
+			"text": "trade_post_owner",
+			"displayText": "trade_post_owner",
+			"description": "Scopes to the owner of the trade post [Province, Title]"
+		},
+		{
+			"text": "true_father",
+			"displayText": "true_father",
+			"description": "Scopes to the real_father if one exists: otherwise it scopes to the father. [Character]"
+		},
+		{
+			"text": "true_father_even_if_dead",
+			"displayText": "true_father_even_if_dead",
+			"description": " [Character]"
+		},
+		{
+			"text": "twin",
+			"displayText": "twin",
+			"description": "Scopes to the character's twin. WARNING: If mods add additional twins (triplets, etc.), these scopes may produce unpredictable results. [Character]"
+		},
+		{
+			"text": "twin_even_if_dead",
+			"displayText": "twin_even_if_dead",
+			"description": " [Character]"
+		},
+		{
+			"text": "any_claim",
+			"displayText": "any_claim",
+			"description": "Scopes to all titles a character has claims upon [Character]"
+		},
+		{
+			"text": "any_de_jure_vassal_title",
+			"displayText": "any_de_jure_vassal_title",
+			"description": "Scopes to all titles that are dejure part of a character or title's realm [Character, Title]"
+		},
+		{
+			"text": "any_direct_de_jure_vassal_title",
+			"displayText": "any_direct_de_jure_vassal_title",
+			"description": "Scopes to all titles that are dejure part of a title's realm [Title]"
+		},
+		{
+			"text": "any_demesne_title",
+			"displayText": "any_demesne_title",
+			"description": "Scopes to all titles a character holds [Character]"
+		},
+		{
+			"text": "any_heir_title",
+			"displayText": "any_heir_title",
+			"description": "Scopes to all titles to which the character is the current heir [Character]"
+		},
+		{
+			"text": "any_landed_title",
+			"displayText": "any_landed_title",
+			"description": "Scopes to all landed titles. Warning CPU HEAVY [Any]"
+		},
+		{
+			"text": "any_mercenary_band",
+			"displayText": "any_mercenary_band",
+			"description": "Scopes to all mercenary bands [Any]"
+		},
+		{
+			"text": "any_potential_tribal_county",
+			"displayText": "any_potential_tribal_county",
+			"description": " [Character]"
+		},
+		{
+			"text": "any_pretender_title",
+			"displayText": "any_pretender_title",
+			"description": "Scopes to all titles held by pretenders [Character, Title]"
+		},
+		{
+			"text": "any_province_holding",
+			"displayText": "any_province_holding",
+			"description": "Scopes to all holdings of a province* [Province]"
+		},
+		{
+			"text": "any_quest_target",
+			"displayText": "any_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "any_realm_title",
+			"displayText": "any_realm_title",
+			"description": "Scopes to all titles within a character or title's realm [Character]"
+		},
+		{
+			"text": "any_title",
+			"displayText": "any_title",
+			"description": "Scopes to all titles [Any]"
+		},
+		{
+			"text": "blood_brother",
+			"displayText": "blood_brother",
+			"description": " [Character]"
+		},
+		{
+			"text": "capital_holding",
+			"displayText": "capital_holding",
+			"description": "Scopes to the character's capital holding title. Note: this is different from capital_scope which scopes to the capital province. [Character, Province]"
+		},
+		{
+			"text": "clan_title",
+			"displayText": "clan_title",
+			"description": "Scopes to the clan of a nomad. [Character]"
+		},
+		{
+			"text": "county",
+			"displayText": "county",
+			"description": "Scopes to the county a barony is in [Province, Title (barony only)]"
+		},
+		{
+			"text": "crownlaw_title",
+			"displayText": "crownlaw_title",
+			"description": "Scopes to the title giving a character or title its crown laws [Character, Title]"
+		},
+		{
+			"text": "crusade_target",
+			"displayText": "crusade_target",
+			"description": "Scopes to the target of the ongoing crusade of the character's religion [Character]"
+		},
+		{
+			"text": "defacto_liege_title",
+			"displayText": "defacto_liege_title",
+			"description": "Scopes to the title a title de facto belongs to [Title]"
+		},
+		{
+			"text": "dejure_liege_title",
+			"displayText": "dejure_liege_title",
+			"description": "Scopes to the title a character or title de jure belongs to [Character, Title]"
+		},
+		{
+			"text": "duchy",
+			"displayText": "duchy",
+			"description": "Scopes to the duchy a province belongs to. (From county scope, you must use dejure_liege_title instead) [Province]"
+		},
+		{
+			"text": "empire",
+			"displayText": "empire",
+			"description": "Scopes to the empire a title belongs to [Province, Title (any except empires)]"
+		},
+		{
+			"text": "family_palace",
+			"displayText": "family_palace",
+			"description": "Scopes to the family palace title of a patrician. [Character]"
+		},
+		{
+			"text": "governor_title",
+			"displayText": "governor_title",
+			"description": "Scopes to the governor title of the scope. Scope can be the offmap power itself, the offmap power ruler, or the governor. [Offmap Power, Character]"
+		},
+		{
+			"text": "invasion_target",
+			"displayText": "invasion_target",
+			"description": ""
+		},
+		{
+			"text": "kingdom",
+			"displayText": "kingdom",
+			"description": "Scopes to the kingdom a title belongs to [Province, Title (duchy or below)]"
+		},
+		{
+			"text": "new_title",
+			"displayText": "new_title",
+			"description": "Scopes to the title previously created in the same scope via create_title command. [Any]"
+		},
+		{
+			"text": "plot_target_title",
+			"displayText": "plot_target_title",
+			"description": "Scopes to the title of the character the character is plotting against [Character]"
+		},
+		{
+			"text": "primary_title",
+			"displayText": "primary_title",
+			"description": "Scopes to the character's primary title [Character]"
+		},
+		{
+			"text": "quest_target",
+			"displayText": "quest_target",
+			"description": "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest. [Character]"
+		},
+		{
+			"text": "random_claim",
+			"displayText": "random_claim",
+			"description": "Scopes to a random title the character has a claim upon. [Character]"
+		},
+		{
+			"text": "random_demesne_title",
+			"displayText": "random_demesne_title",
+			"description": "Scopes to a random title the character holds. [Character]"
+		},
+		{
+			"text": "random_direct_de_jure_vassal_title",
+			"displayText": "random_direct_de_jure_vassal_title",
+			"description": "Scopes to a random title that is dejure part of the scoped title's realm [Title]"
+		},
+		{
+			"text": "random_landed_title",
+			"displayText": "random_landed_title",
+			"description": "Scopes to a random landed title [Any]"
+		},
+		{
+			"text": "random_potential_tribal_county",
+			"displayText": "random_potential_tribal_county",
+			"description": "Scopes to a county suitable for tribal takeover [Character]"
+		},
+		{
+			"text": "random_province_holding",
+			"displayText": "random_province_holding",
+			"description": "Scopes to a random holding of a province [Province]"
+		},
+		{
+			"text": "random_quest_target",
+			"displayText": "random_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "random_realm_title",
+			"displayText": "random_realm_title",
+			"description": "Scopes to a random title in realm. [Character]"
+		},
+		{
+			"text": "supported_claimant_title",
+			"displayText": "supported_claimant_title",
+			"description": " [Character]"
+		},
+		{
+			"text": "realm",
+			"displayText": "realm",
+			"description": "Scopes to the independent realm the character or title is part of. It is the equivalent of top_liege for titles. [Character, Title]"
+		},
+		{
+			"text": "succ_law_title",
+			"displayText": "succ_law_title",
+			"description": "Scopes to a title where has_law trigger can be used to check succession law. [Title]"
+		},
+		{
+			"text": "thirdparty_title_scope",
+			"displayText": "thirdparty_title_scope",
+			"description": "Only valid if thirdparty title is involved in the war [War]"
+		},
+		{
+			"text": "any_connected_province",
+			"displayText": "any_connected_province",
+			"description": "Scopes to all provinces in the targeted sub-realm that are connected to this province. Takes the same parameters as the is_connected_to trigger, except for target . [Province]"
+		},
+		{
+			"text": "any_demesne_province",
+			"displayText": "any_demesne_province",
+			"description": "Scopes to all provinces in a character's demesne. [Character]"
+		},
+		{
+			"text": "any_disconnected_province",
+			"displayText": "any_disconnected_province",
+			"description": "Scopes to all provinces in the targeted sub-realm that aren't connected to this province. Takes the same parameters as the is_connected_to trigger, except for target . [Province]"
+		},
+		{
+			"text": "any_neighbor_province",
+			"displayText": "any_neighbor_province",
+			"description": "Scopes to all border provinces, including sea tiles. [Province]"
+		},
+		{
+			"text": "any_province",
+			"displayText": "any_province",
+			"description": "Scopes to all provinces. WARNING CPU HEAVY [Any]"
+		},
+		{
+			"text": "any_fort",
+			"displayText": "any_fort",
+			"description": "Scopes to all of a character's forts [Character]"
+		},
+		{
+			"text": "any_hospital",
+			"displayText": "any_hospital",
+			"description": "Scopes to all of a character's hospitals [Character]"
+		},
+		{
+			"text": "any_quest_target",
+			"displayText": "any_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "any_realm_province",
+			"displayText": "any_realm_province",
+			"description": "Scopes to all provinces in a character or title's realm [Character, Title]"
+		},
+		{
+			"text": "any_trade_post",
+			"displayText": "any_trade_post",
+			"description": "Scopes to all of a character's trade posts [Character]"
+		},
+		{
+			"text": "any_trade_route_province",
+			"displayText": "any_trade_route_province",
+			"description": "Scopes to all other provinces on a trade route [Province]"
+		},
+		{
+			"text": "capital_scope",
+			"displayText": "capital_scope",
+			"description": "Scopes to the character's (or title's, if a capital has been defined in landed_titles definitions) capital province [Character, Title]"
+		},
+		{
+			"text": "location",
+			"displayText": "location",
+			"description": "Scopes to the character's location (or county or barony title's province) [Character, Title, Unit]"
+		},
+		{
+			"text": "plot_target_province",
+			"displayText": "plot_target_province",
+			"description": "Scopes to the province that the character's plot is targeting [Character]"
+		},
+		{
+			"text": "quest_target",
+			"displayText": "quest_target",
+			"description": "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest. [Character]"
+		},
+		{
+			"text": "random_connected_province",
+			"displayText": "random_connected_province",
+			"description": "Scopes to a random province in the targeted sub-realm that is connected to this province. Takes the same parameters as the is_connected_to trigger, except for target . [Province]"
+		},
+		{
+			"text": "random_demesne_province",
+			"displayText": "random_demesne_province",
+			"description": "Scopes to a random province in the character's demesne. [Character]"
+		},
+		{
+			"text": "random_disconnected_province",
+			"displayText": "random_disconnected_province",
+			"description": "Scopes to a random province in the targeted sub-realm that isn't connected to this province. Takes the same parameters as the is_connected_to trigger, except for target . [Province]"
+		},
+		{
+			"text": "random_neighbor_province",
+			"displayText": "random_neighbor_province",
+			"description": "Scopes to a random bordering province. Unlike any_neighbor_province, this does NOT scope to sea tiles! [Province]"
+		},
+		{
+			"text": "random_province",
+			"displayText": "random_province",
+			"description": "Scopes to a random province province [Any]"
+		},
+		{
+			"text": "random_quest_target",
+			"displayText": "random_quest_target",
+			"description": "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit. [Any]"
+		},
+		{
+			"text": "random_realm_province",
+			"displayText": "random_realm_province",
+			"description": "Scopes to a random province in the character or title's realm. [Character, Title]"
+		},
+		{
+			"text": "random_trade_post",
+			"displayText": "random_trade_post",
+			"description": "Scopes to a random trade post of the character or province. [Character]"
+		},
+		{
+			"text": "sea_zone",
+			"displayText": "sea_zone",
+			"description": "Scopes to ALL sea provinces bordering the currently scoped province [Province]"
+		},
+		{
+			"text": "offmap_power",
+			"displayText": "offmap_power",
+			"description": "Scopes to the offmap power of the scope. Scope can be the offmap power ruler, the governor, or the governor title. [Character, Title]"
+		},
+		{
+			"text": "any_war",
+			"displayText": "any_war",
+			"description": "Scopes to any war the character is participating in as an active member: a liege participating would not count.When used in title scope, checks all wars for that title. [Character, Title]"
+		},
+		{
+			"text": "siege",
+			"displayText": "siege",
+			"description": "Scopes to the siege the character is participating in [Character]"
+		},
+		{
+			"text": "any_army",
+			"displayText": "any_army",
+			"description": "Scopes to all armies belonging to the character. [Character]"
+		},
+		{
+			"text": "any_controlled_unit",
+			"displayText": "any_controlled_unit",
+			"description": "Scopes to all units controlled by the character (?). [Character]"
+		},
+		{
+			"text": "any_fleet",
+			"displayText": "any_fleet",
+			"description": "Scopes to all fleet belonging to the character. [Character]"
+		},
+		{
+			"text": "any_unit",
+			"displayText": "any_unit",
+			"description": "Scopes to all units belonging to the character. [Character]"
+		},
+		{
+			"text": "random_army",
+			"displayText": "random_army",
+			"description": "Scopes to an armies belonging to the character. [Character]"
+		},
+		{
+			"text": "random_controlled_unit",
+			"displayText": "random_controlled_unit",
+			"description": "Scopes to a unit controlled by the character (?). [Character]"
+		},
+		{
+			"text": "random_fleet",
+			"displayText": "random_fleet",
+			"description": "Scopes to a fleet belonging to the character. [Character]"
+		},
+		{
+			"text": "random_unit",
+			"displayText": "random_unit",
+			"description": "Scopes to a unit belonging to the character. [Character]"
+		},
+		{
+			"text": "religion_scope",
+			"displayText": "religion_scope",
+			"description": "Scopes to the religion of the current scope. [Character, Province, Society]"
+		},
+		{
+			"text": "secret_religion_scope",
+			"displayText": "secret_religion_scope",
+			"description": "Scopes to the secret religion of the character. [Character]"
+		},
+		{
+			"text": "true_religion_scope",
+			"displayText": "true_religion_scope",
+			"description": "Scopes to the true religion of the character. [Character]"
+		},
+		{
+			"text": "culture_scope",
+			"displayText": "culture_scope",
+			"description": "Scopes to the culture of the character or province. [Character, Province]"
+		},
+		{
+			"text": "gfx_culture_scope",
+			"displayText": "gfx_culture_scope",
+			"description": "Scopes to the culturegfx of the character. [Character]"
+		},
+		{
+			"text": "secret_religious_cult",
+			"displayText": "secret_religious_cult",
+			"description": "Scopes to the secret religious cult of the character's true religion, or otherwise the secret religious cult of the religion of the scope. [Character, Province, Religion]"
+		},
+		{
+			"text": "society",
+			"displayText": "society",
+			"description": "Scopes to the society the character is a member of [Character]"
+		},
+		{
+			"text": "any_artifact",
+			"displayText": "any_artifact",
+			"description": "Scopes to any artifact. Used within character scope. [Character]"
+		},
+		{
+			"text": "new_artifact",
+			"displayText": "new_artifact",
+			"description": "Scopes to the artifact just created using add_artifact. [Character]"
+		},
+		{
+			"text": "random_artifact",
+			"displayText": "random_artifact",
+			"description": "Scopes to a random artifact. Used within character scope. [Character]"
+		},
+		{
+			"text": "any_bloodline",
+			"displayText": "any_bloodline",
+			"description": "Scopes to any created bloodline [Any]"
+		},
+		{
+			"text": "any_owned_bloodline",
+			"displayText": "any_owned_bloodline",
+			"description": "Scopes to any bloodline owned by the character [Character]"
+		},
+		{
+			"text": "new_bloodline",
+			"displayText": "new_bloodline",
+			"description": "Scopes to the he bloodline you just created in script"
+		},
+		{
+			"text": "random_bloodline",
+			"displayText": "random_bloodline",
+			"description": "Scopes to a random created bloodline [Any]"
+		},
+		{
+			"text": "random_owned_bloodline",
+			"displayText": "random_owned_bloodline",
+			"description": "Scopes to any bloodline owned by the character [Character]"
+		}
+	],
+	"equal": [
+	],
+	"bracket": [
+	]
+}

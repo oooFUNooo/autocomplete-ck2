@@ -1,0 +1,23 @@
+{
+  "name": "autocomplete-ck2",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Autocomplete Plus provider for Crusader Kings II",
+  "keywords": [
+    "Autocomplete",
+    "Paradox",
+    "CK2"
+  ],
+  "repository": "https://github.com/oooFUNooo/autocomplete-ck2",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "4.0.0": "provider"
+      }
+    }
+  }
+}
