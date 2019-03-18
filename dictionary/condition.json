@@ -1,5 +1,2398 @@
 {
-	"simple": [],
-	"equal": [],
-	"bracket": []
+	"simple": [
+		{
+			"text": "adventurer",
+			"displayText": "adventurer",
+			"description": "Checks adventurer flag of the title (title that gets destroyed whenever the holder gains another title or when the holder dies). [title]"
+		},
+		{
+			"text": "age",
+			"displayText": "age",
+			"description": "The age of a character. Can be any whole number. [character]"
+		},
+		{
+			"text": "age_diff",
+			"displayText": "age_diff",
+			"description": "The \"absolute value\" of the age difference between two characters. Typically used in conjunction with is_older_than . [character]"
+		},
+		{
+			"text": "ai",
+			"displayText": "ai",
+			"description": "*If yes, will only fire for ai characters.*If no, will only fire for the player(s).Can also be used as an event pre-trigger. [character]"
+		},
+		{
+			"text": "ai_ambition",
+			"displayText": "ai_ambition",
+			"description": "rowspan=5 Check an AI behavior modifier (based on traits) [character]"
+		},
+		{
+			"text": "ai_greed",
+			"displayText": "ai_greed",
+			"description": " [character]"
+		},
+		{
+			"text": "ai_honor",
+			"displayText": "ai_honor",
+			"description": " [character]"
+		},
+		{
+			"text": "ai_rationality",
+			"displayText": "ai_rationality",
+			"description": " [character]"
+		},
+		{
+			"text": "ai_zeal",
+			"displayText": "ai_zeal",
+			"description": " [character]"
+		},
+		{
+			"text": "always",
+			"displayText": "always",
+			"description": "Can be used to fail the conditions, without needing to comment/delete the code.Also used to use scopes as boolean conditions, with pattern: [code] If the scope matches nothing, then conditions fails. [any]"
+		},
+		{
+			"text": "among_most_powerful_vassals",
+			"displayText": "among_most_powerful_vassals",
+			"description": "Checks if the character is among the nth most powerful vassals of the realm. It compares the character's powerbase with that of all other direct vassals of the same liege. Also see is_powerful_vassal and relative_power . Does not permit the use of 2.8+ comparison operators! [character]"
+		},
+		{
+			"text": "artifact",
+			"displayText": "artifact",
+			"description": "(2.8) Checks to see if the scoped artifact is the same as the target artifact. [artifact]"
+		},
+		{
+			"text": "artifact_age",
+			"displayText": "artifact_age",
+			"description": "(2.8) Checks to see if the artifact is older than the specified value. Can use comparison operators ( =, == ). Always returns false if the artifact has no known creation date. [artifact]"
+		},
+		{
+			"text": "artifact_can_be_gifted_to",
+			"displayText": "artifact_can_be_gifted_to",
+			"description": "(2.8) Checks if the scoped artifact can be gifted to the target character. [artifact]"
+		},
+		{
+			"text": "artifact_type",
+			"displayText": "artifact_type",
+			"description": "Checks if the scoped artifact is of the given type [artifact]"
+		},
+		{
+			"text": "artifact_type_owned_by",
+			"displayText": "artifact_type_owned_by",
+			"description": "Checks if the given character owns at least one instance of the scoped artifact. [artifact]"
+		},
+		{
+			"text": "attribute_diff",
+			"displayText": "attribute_diff",
+			"description": "Checks that currently scoped character has at least \"value\" more points in the given \"attribute\", than target character. [character]"
+		},
+		{
+			"text": "at_location",
+			"displayText": "at_location",
+			"description": "Checks if two characters are in the same location [character]"
+		},
+		{
+			"text": "base_health",
+			"displayText": "base_health",
+			"description": "Checks for hidden attribute base health [character]"
+		},
+		{
+			"text": "bloodline",
+			"displayText": "bloodline",
+			"description": "Returns true if the current scope is the exact same bloodline as the RHS scope . Note that this compares bloodlines, not bloodline types. [bloodline]"
+		},
+		{
+			"text": "bloodline_is_active_for",
+			"displayText": "bloodline_is_active_for",
+			"description": "Returns true if current scope is active for on right-hand side. [bloodline]"
+		},
+		{
+			"text": "borders_lake",
+			"displayText": "borders_lake",
+			"description": "Province borders a lake [province]"
+		},
+		{
+			"text": "borders_major_river",
+			"displayText": "borders_major_river",
+			"description": "Province borders a major river [province]"
+		},
+		{
+			"text": "calc_true_if",
+			"displayText": "calc_true_if",
+			"description": "Returns true if at least amount of the triggers in it return true. [any]"
+		},
+		{
+			"text": "can_be_given_away",
+			"displayText": "can_be_given_away",
+			"description": "The title is not occupied, has no holdings being sieged, or contested in war. The title is not a capital settlement. (Normally, you'd give it away by giving away the county.) [title]"
+		},
+		{
+			"text": "can_change_religion",
+			"displayText": "can_change_religion",
+			"description": " [character]"
+		},
+		{
+			"text": "can_call_crusade",
+			"displayText": "can_call_crusade",
+			"description": "Crusades have been unlocked [character]"
+		},
+		{
+			"text": "can_copy_personality_trait_from",
+			"displayText": "can_copy_personality_trait_from",
+			"description": " [character]"
+		},
+		{
+			"text": "can_land_path_to",
+			"displayText": "can_land_path_to",
+			"description": "Checks if it is possible to travel by land between two provinces. Can be expanded to also take a distance parameter. [code] [code] [code] [code] [province]"
+		},
+		{
+			"text": "can_see_secret_religion",
+			"displayText": "can_see_secret_religion",
+			"description": "Checks if the character scope you're currently in can see the target character's secret religion. [character]"
+		},
+		{
+			"text": "can_swap_job_title",
+			"displayText": "can_swap_job_title",
+			"description": "Checks if a character can get the job position of another character [character]"
+		},
+		{
+			"text": "can_use_cb",
+			"displayText": "can_use_cb",
+			"description": "(2.8) Checks if the specified casus belli would show up and be usable in the UI. Checks everything in the CB itself, plus the extra hardcoded restrictions on regular war declarations. [code] [character]"
+		},
+		{
+			"text": "character",
+			"displayText": "character",
+			"description": "Checks if 2 characters are the same. [code] character = 1234 [character]"
+		},
+		{
+			"text": "check_variable",
+			"displayText": "check_variable",
+			"description": "Used in conjunction with change_variable command. [character/province]"
+		},
+		{
+			"text": "claimed_by",
+			"displayText": "claimed_by",
+			"description": " [title]"
+		},
+		{
+			"text": "clan",
+			"displayText": "clan",
+			"description": "Whether character is the head of a nomadic clan, or title is a nomadic clan. [code] [character,title]"
+		},
+		{
+			"text": "clan_opinion",
+			"displayText": "clan_opinion",
+			"description": " [character]"
+		},
+		{
+			"text": "combat_rating",
+			"displayText": "combat_rating",
+			"description": "Checks combat rating modifier [character]"
+		},
+		{
+			"text": "climate",
+			"displayText": "climate",
+			"description": "Check whether a province has a winter climate defined in /map/climate.txt - does NOT check whether province is \"currently\" experiencing a winter, use is_winter for that.Note that you can only check for winter types (mild_winter, normal_winter, sever_winter), and not for \"temperate\" climate: but obviously any province that does not have a winter climate is temperate. [province]"
+		},
+		{
+			"text": "combat_rating_diff",
+			"displayText": "combat_rating_diff",
+			"description": "Tests combat rating modifier difference with another character [character]"
+		},
+		{
+			"text": "completely_controls",
+			"displayText": "completely_controls",
+			"description": "Character controls (personally or via a vassal) all the baronies under specified title.Notes:*the title itself doesn't need to exist.*completely_controls is true if title name is invalid. [character]"
+		},
+		{
+			"text": "completely_controls_region",
+			"displayText": "completely_controls_region",
+			"description": "Similar to completely_controls [character]"
+		},
+		{
+			"text": "conquest_culture",
+			"displayText": "conquest_culture",
+			"description": "If yes, only fires if conquest_culture is set (?). Certain CBs set Conquest_Culture (used for cultural conversion events) [title]"
+		},
+		{
+			"text": "continent",
+			"displayText": "continent",
+			"description": " [province]"
+		},
+		{
+			"text": "controlled_by",
+			"displayText": "controlled_by",
+			"description": "Checks if province/holding is occupied (war) by another character/realm [title/province]"
+		},
+		{
+			"text": "controls_religion",
+			"displayText": "controls_religion",
+			"description": "If yes, only picks characters who are the head of their religion (holder of a title with a flag controls_religion = ) [code] [character/title]"
+		},
+		{
+			"text": "could_be_parent_of",
+			"displayText": "could_be_parent_of",
+			"description": "(2.8) Checks if the scoped character is old enough to be the target character's parent. This means that they're at least AGE_OF_MARRIAGE_MALE years older, and at most MAX_CHILD_BIRTH_AGE years older if female (for immortal characters, as long as they became immortal before this age they bypass the check). It also checks that they didn't die before the birth date of the target. [character]"
+		},
+		{
+			"text": "count",
+			"displayText": "count",
+			"description": "Number of elements matched by a scope. Since patch 2.3 works with all any_ scopes."
+		},
+		{
+			"text": "culture",
+			"displayText": "culture",
+			"description": "Checks if the character has this specific culture [character/province/title]"
+		},
+		{
+			"text": "culture_group",
+			"displayText": "culture_group",
+			"description": "Checks if the character is part of this culture group [character/province/title]"
+		},
+		{
+			"text": "day_of_birth",
+			"displayText": "day_of_birth",
+			"description": "Checks if the day of the character's date of birth is at least this number. [character]"
+		},
+		{
+			"text": "days_at_current_society_rank",
+			"displayText": "days_at_current_society_rank",
+			"description": "Checks if scope character has been at current rank in society for the given number of days. [character]"
+		},
+		{
+			"text": "days_in_society",
+			"displayText": "days_in_society",
+			"description": "Checks if scope character has been in a society for the given number of days [character]"
+		},
+		{
+			"text": "days_since_policy_change",
+			"displayText": "days_since_policy_change",
+			"description": "True if the specified number of days has passed since the last policy change of the scoped offmap power. Accepts comparison operators. [offmap]"
+		},
+		{
+			"text": "days_since_status_change",
+			"displayText": "days_since_status_change",
+			"description": "True if the specified number of days has passed since the last status change of the scoped offmap power. Accepts comparison operators. [offmap]"
+		},
+		{
+			"text": "defending_against_claimant",
+			"displayText": "defending_against_claimant",
+			"description": " [character]"
+		},
+		{
+			"text": "demesne_efficiency",
+			"displayText": "demesne_efficiency",
+			"description": " [character]"
+		},
+		{
+			"text": "demesne_garrison_size",
+			"displayText": "demesne_garrison_size",
+			"description": " [character]"
+		},
+		{
+			"text": "demesne_size",
+			"displayText": "demesne_size",
+			"description": "Checks if the character has a minimum of this demesne size [character]"
+		},
+		{
+			"text": "demesne_size_compared_to_limit",
+			"displayText": "demesne_size_compared_to_limit",
+			"description": "(2.8) Checks if the character's demesne size is proportional to the floating point percentage specified. Can use comparison operators ( =, , >=, == ). [character]"
+		},
+		{
+			"text": "de_facto_liege",
+			"displayText": "de_facto_liege",
+			"description": " [character/title/province]"
+		},
+		{
+			"text": "de_facto_liege_title",
+			"displayText": "de_facto_liege_title",
+			"description": "Checks that the defacto liege title of a character or title is the right-hand side. [character/title]"
+		},
+		{
+			"text": "de_jure_liege",
+			"displayText": "de_jure_liege",
+			"description": "Checks whether current scope is a direct de jure vassal of right hand side scope. [character/title/province]"
+		},
+		{
+			"text": "de_jure_liege_or_above",
+			"displayText": "de_jure_liege_or_above",
+			"description": "Checks whether current scope is a de jure vassal of right hand side scope. [character/title/province]"
+		},
+		{
+			"text": "de_jure_vassal_or_below",
+			"displayText": "de_jure_vassal_or_below",
+			"description": "Checks whether current scope is a de jure liege of right hand side scope. [character/title]"
+		},
+		{
+			"text": "death_reason",
+			"displayText": "death_reason",
+			"description": " [character]"
+		},
+		{
+			"text": "decadence",
+			"displayText": "decadence",
+			"description": " [character]"
+		},
+		{
+			"text": "disease",
+			"displayText": "disease",
+			"description": "Checks if the province has the specified disease. [province]"
+		},
+		{
+			"text": "disease_defence",
+			"displayText": "disease_defence",
+			"description": "Checks if the province has at least the specified disease defence modifier. [province]"
+		},
+		{
+			"text": "disliked_by_offmap",
+			"displayText": "disliked_by_offmap",
+			"description": "Checks whether the scoped character matches the current \"dislike\" of the offmap power of the specified \"type\". If the \"dislike\" trigger has a context, the \"context\" parameter must match to return true. If the \"dislike\" trigger has no context, the context parameter must be omitted to return true. [character]"
+		},
+		{
+			"text": "difficulty",
+			"displayText": "difficulty",
+			"description": "The game difficulty [any]"
+		},
+		{
+			"text": "diplomacy",
+			"displayText": "diplomacy",
+			"description": "The character's Diplomacy attribute. For state value, see realm_diplomacy [character]"
+		},
+		{
+			"text": "diplomatic_immunity",
+			"displayText": "diplomatic_immunity",
+			"description": "Checks if character has the diplomatic_immunity flag, protecting him from hostile actions. [character]"
+		},
+		{
+			"text": "dislike_tribal_organization",
+			"displayText": "dislike_tribal_organization",
+			"description": "Checks for dislike_tribal_organization religion flag [character/title]"
+		},
+		{
+			"text": "distance",
+			"displayText": "distance",
+			"description": "Determines the minimum distance from the scope. If used with NOT, it becomes maximum distance. Distances are pixels within the main map images & positions.txt [character/province]"
+		},
+		{
+			"text": "distance_from_realm",
+			"displayText": "distance_from_realm",
+			"description": " [character]"
+		},
+		{
+			"text": "dynastic_prestige",
+			"displayText": "dynastic_prestige",
+			"description": "Checks if the character's dynasty has a dynastic prestige of at least this amount. [character]"
+		},
+		{
+			"text": "dynasty",
+			"displayText": "dynasty",
+			"description": "The character's dynasty, indexed by an integer value. Lowborn (no dynasty) match \"none\" or \"no\" value. [character]"
+		},
+		{
+			"text": "dynasty_realm_power",
+			"displayText": "dynasty_realm_power",
+			"description": " [character]"
+		},
+		{
+			"text": "excommunicated_for",
+			"displayText": "excommunicated_for",
+			"description": " [character]"
+		},
+		{
+			"text": "faction_exists",
+			"displayText": "faction_exists",
+			"description": " [character]"
+		},
+		{
+			"text": "faction_power",
+			"displayText": "faction_power",
+			"description": " [character]"
+		},
+		{
+			"text": "family",
+			"displayText": "family",
+			"description": "Seems to be the same as dynasty [character]"
+		},
+		{
+			"text": "father_of_unborn_known",
+			"displayText": "father_of_unborn_known",
+			"description": "Checks if a pregnant woman's unborn child has a known father. [character]"
+		},
+		{
+			"text": "fertility",
+			"displayText": "fertility",
+			"description": "The character's fertility value. In-game, can only be seen through the \"charinfo\" console command. [character]"
+		},
+		{
+			"text": "flank_has_leader",
+			"displayText": "flank_has_leader",
+			"description": "Used in combat tactics [battle]"
+		},
+		{
+			"text": "flank_has_tactic",
+			"displayText": "flank_has_tactic",
+			"description": " [battle(?)]"
+		},
+		{
+			"text": "from_ruler_dynasty",
+			"displayText": "from_ruler_dynasty",
+			"description": " [character]"
+		},
+		{
+			"text": "gold",
+			"displayText": "gold",
+			"description": "How much money a character has. [character]"
+		},
+		{
+			"text": "government",
+			"displayText": "government",
+			"description": "Check government type of a character. For checking government groups, see is_feudal , is_republic , etc. [character]"
+		},
+		{
+			"text": "graphical_culture",
+			"displayText": "graphical_culture",
+			"description": "A character's graphical culture. This is different from the effect set_graphical_culture which takes a culture, not a culturegfx. In-game, can only be seen through the \"charinfo\" console command. Fixed in 2.8. (In 2.7 and earlier, checking against an invalid culturegfx will cause a CTD.) [character]"
+		},
+		{
+			"text": "had_artifact_flag",
+			"displayText": "had_artifact_flag",
+			"description": "(2.8) Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [character]"
+		},
+		{
+			"text": "had_bloodline_flag",
+			"displayText": "had_bloodline_flag",
+			"description": "Returns true if the current scope has had the script flag for the defined time period [bloodline]"
+		},
+		{
+			"text": "had_character_flag",
+			"displayText": "had_character_flag",
+			"description": "Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [character]"
+		},
+		{
+			"text": "had_dynasty_flag",
+			"displayText": "had_dynasty_flag",
+			"description": "Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [character]"
+		},
+		{
+			"text": "had_flag",
+			"displayText": "had_flag",
+			"description": "Checks if the current scope has had a given flag for a given time in days, months or years. Works for any scope that can store flags, unlike the more specific had_\"scope\"_flag commands. [any with flags]"
+		},
+		{
+			"text": "had_global_flag",
+			"displayText": "had_global_flag",
+			"description": "Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [any]"
+		},
+		{
+			"text": "had_province_flag",
+			"displayText": "had_province_flag",
+			"description": "Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [province]"
+		},
+		{
+			"text": "had_offmap_flag",
+			"displayText": "had_offmap_flag",
+			"description": "Checks whether the offmap power previously had the specified \"flag\" within the last number of \"days\". [offmap]"
+		},
+		{
+			"text": "had_title_flag",
+			"displayText": "had_title_flag",
+			"description": "Note: \"months\" and \"years\" do not work as parameters, only \"days\" does. [title]"
+		},
+		{
+			"text": "has_ambition",
+			"displayText": "has_ambition",
+			"description": " [character]"
+		},
+		{
+			"text": "has_any_building",
+			"displayText": "has_any_building",
+			"description": "Checks if the holding has any building [title]"
+		},
+		{
+			"text": "has_any_opinion_modifier",
+			"displayText": "has_any_opinion_modifier",
+			"description": "Similar to \"has_opinion_modifier\". [character]"
+		},
+		{
+			"text": "has_any_quest",
+			"displayText": "has_any_quest",
+			"description": "Checks whether or not the scoped character has any quests [character]"
+		},
+		{
+			"text": "has_any_symptom",
+			"displayText": "has_any_symptom",
+			"description": " [character]"
+		},
+		{
+			"text": "has_artifact",
+			"displayText": "has_artifact",
+			"description": "Checks if the scoped character owns an artifact by that name. [character]"
+		},
+		{
+			"text": "has_artifact_flag",
+			"displayText": "has_artifact_flag",
+			"description": "Checks if the scoped artifact has the given flag defined. [artifact]"
+		},
+		{
+			"text": "has_assigned_minor_title",
+			"displayText": "has_assigned_minor_title",
+			"description": "Checks to see if the character has assigned a particular minor title, or at least how many of them [character]"
+		},
+		{
+			"text": "has_autocephaly",
+			"displayText": "has_autocephaly",
+			"description": "Checks for religion autocephaly = yes [character]"
+		},
+		{
+			"text": "has_bloodline_flag",
+			"displayText": "has_bloodline_flag",
+			"description": "Checks if a bloodline has a specified flag. Note: \"flags\" in CKII scripting are not pre-determined or stored anywhere, they are dynamically created in the script. A mistyped flag will not be caught by the Validator, as there are no \"invalid\" flags. [bloodline]"
+		},
+		{
+			"text": "has_blood_oath_with",
+			"displayText": "has_blood_oath_with",
+			"description": " [character]"
+		},
+		{
+			"text": "has_building",
+			"displayText": "has_building",
+			"description": "Checks if a holding has the specified building (under construction buildings do not count). [code] [title (barony only),province]"
+		},
+		{
+			"text": "has_called_crusade",
+			"displayText": "has_called_crusade",
+			"description": " [character]"
+		},
+		{
+			"text": "has_capital",
+			"displayText": "has_capital",
+			"description": " [province]"
+		},
+		{
+			"text": "has_character_flag",
+			"displayText": "has_character_flag",
+			"description": "Checks if a character has a specified flag. Note: \"flags\" in CKII scripting are not pre-determined or stored anywhere, they are dynamically created in the script. A mistyped flag will not be caught by the Validator, as there are no \"invalid\" flags. [character]"
+		},
+		{
+			"text": "has_character_modifier",
+			"displayText": "has_character_modifier",
+			"description": "Checks if the character has a modifier [character]"
+		},
+		{
+			"text": "has_children",
+			"displayText": "has_children",
+			"description": "Checks if the character has children. Functionally identical to num_of_children = 1. [character]"
+		},
+		{
+			"text": "has_claim",
+			"displayText": "has_claim",
+			"description": " [character]"
+		},
+		{
+			"text": "has_council",
+			"displayText": "has_council",
+			"description": " [character]"
+		},
+		{
+			"text": "has_concubinage",
+			"displayText": "has_concubinage",
+			"description": "Checks if religion flag max_consorts > 0 [character]"
+		},
+		{
+			"text": "has_crown_law_title",
+			"displayText": "has_crown_law_title",
+			"description": "Used to check crown laws for a specified title. Is not a condition itself though, it must be used as a scope to check crown laws by category (succession, for instance). [title]"
+		},
+		{
+			"text": "has_de_jure_pretension",
+			"displayText": "has_de_jure_pretension",
+			"description": " [title]"
+		},
+		{
+			"text": "has_disease",
+			"displayText": "has_disease",
+			"description": " [character/province]"
+		},
+		{
+			"text": "has_dlc",
+			"displayText": "has_dlc",
+			"description": "Checks if the user has a specified DLC. Values: \"The Sword of Islam\", \"Legacy of Rome\", \"Sunset Invasion\", \"The Republic\", \"The Old Gods\", \"Sons of Abraham\", \"Rajas of India\", \"Charlemagne\", \"Way of Life\", \"Horse Lords\", \"Zeus\" or \"Conclave\" (both are equivalent), \"Reapers\", \"Mystics\", \"Jade Dragon\", or \"Holy Fury\". [any]"
+		},
+		{
+			"text": "has_dynasty_flag",
+			"displayText": "has_dynasty_flag",
+			"description": " [character]"
+		},
+		{
+			"text": "has_earmarked_regiments",
+			"displayText": "has_earmarked_regiments",
+			"description": "Set via spawn_unit command and earmark parameter. [character]"
+		},
+		{
+			"text": "has_earmarked_regiments_not_raiding",
+			"displayText": "has_earmarked_regiments_not_raiding",
+			"description": "Check for earmark & raiding [character]"
+		},
+		{
+			"text": "has_embargo",
+			"displayText": "has_embargo",
+			"description": " [character]"
+		},
+		{
+			"text": "has_empty_holding",
+			"displayText": "has_empty_holding",
+			"description": " [province]"
+		},
+		{
+			"text": "has_epidemic",
+			"displayText": "has_epidemic",
+			"description": "Checks for a trait with is_epidemic = yes , and checks if a province has an epidemic. [character/province]"
+		},
+		{
+			"text": "has_feud_with",
+			"displayText": "has_feud_with",
+			"description": " [character]"
+		},
+		{
+			"text": "has_flag",
+			"displayText": "has_flag",
+			"description": "Checks if the current scope has a given flag. Works for any scope that can store flags, unlike the more specific has_\"scope\"_flag commands. [any with flags]"
+		},
+		{
+			"text": "has_focus",
+			"displayText": "has_focus",
+			"description": "Checks for focuses [character]"
+		},
+		{
+			"text": "has_game_rule",
+			"displayText": "has_game_rule",
+			"description": "Checks if a game rule is active. See game rules modding. [any]"
+		},
+		{
+			"text": "has_game_started",
+			"displayText": "has_game_started",
+			"description": "Checks if the game has been unpaused. [any]"
+		},
+		{
+			"text": "has_global_flag",
+			"displayText": "has_global_flag",
+			"description": "See flags. [any]"
+		},
+		{
+			"text": "has_guardian",
+			"displayText": "has_guardian",
+			"description": " [character]"
+		},
+		{
+			"text": "has_had_offmap_name",
+			"displayText": "has_had_offmap_name",
+			"description": "[code] [code] [offmap]"
+		},
+		{
+			"text": "has_hospital",
+			"displayText": "has_hospital",
+			"description": "Checks whether a province has a hospital [province]"
+		},
+		{
+			"text": "has_holding_modifier",
+			"displayText": "has_holding_modifier",
+			"description": "Checks if the holding has the given holding modifier [title]"
+		},
+		{
+			"text": "has_horde_culture",
+			"displayText": "has_horde_culture",
+			"description": "Check for hord flag from culture definition [character]"
+		},
+		{
+			"text": "has_inheritance_blocker",
+			"displayText": "has_inheritance_blocker",
+			"description": "Checks if the character in the current scope has a trait that blocks inheritance (cannot_inherit = yes) [character]"
+		},
+		{
+			"text": "has_instances_of_character_modifier",
+			"displayText": "has_instances_of_character_modifier",
+			"description": "Checks if the character has a amount of times the given character modifier [character]"
+		},
+		{
+			"text": "has_instances_of_holding_modifier",
+			"displayText": "has_instances_of_holding_modifier",
+			"description": "Checks if the holding has a amount of times the given holding modifier [title]"
+		},
+		{
+			"text": "has_instances_of_province_modifier",
+			"displayText": "has_instances_of_province_modifier",
+			"description": "Checks if the province has a amount of times the given province modifier [province]"
+		},
+		{
+			"text": "has_job_action",
+			"displayText": "has_job_action",
+			"description": " [character]"
+		},
+		{
+			"text": "has_job_title",
+			"displayText": "has_job_title",
+			"description": "Checks that character is a councillor. [character]"
+		},
+		{
+			"text": "has_known_creation_date",
+			"displayText": "has_known_creation_date",
+			"description": "(2.8) Checks if the artifact has a creation date on record. [artifact]"
+		},
+		{
+			"text": "has_landed_title",
+			"displayText": "has_landed_title",
+			"description": " [character]"
+		},
+		{
+			"text": "has_law",
+			"displayText": "has_law",
+			"description": " [character/title]"
+		},
+		{
+			"text": "has_liege_enforced_peace",
+			"displayText": "has_liege_enforced_peace",
+			"description": "Prevents wars, also see will_liege_enforce_peace . [character]"
+		},
+		{
+			"text": "has_living_children",
+			"displayText": "has_living_children",
+			"description": "Checks if the character has living children. [character]"
+		},
+		{
+			"text": "has_lover",
+			"displayText": "has_lover",
+			"description": "Yes if the character has a lover [character]"
+		},
+		{
+			"text": "has_mercenary_band",
+			"displayText": "has_mercenary_band",
+			"description": "Checks if character has already created a mercenary band. [title]"
+		},
+		{
+			"text": "has_mercenary_maintenance_modifier",
+			"displayText": "has_mercenary_maintenance_modifier",
+			"description": "Checks for a static modifier added via set_mercenary_maintenance_modifier on scoped mercenary tile. [title]"
+		},
+		{
+			"text": "has_minor_title",
+			"displayText": "has_minor_title",
+			"description": "Yes if the character has a minor title. Also includes religion titles. [character]"
+		},
+		{
+			"text": "has_newly_acquired_titles",
+			"displayText": "has_newly_acquired_titles",
+			"description": "Character holds titles he just recently acquired [character]"
+		},
+		{
+			"text": "has_nickname",
+			"displayText": "has_nickname",
+			"description": "Can be used to check for a specific nickname, or the fact of having a nickname. [character]"
+		},
+		{
+			"text": "has_non_aggression_pact_with",
+			"displayText": "has_non_aggression_pact_with",
+			"description": "Checks if a character a non-aggression pact with another character. [character]"
+		},
+		{
+			"text": "has_objective",
+			"displayText": "has_objective",
+			"description": "Deprecated, replaced by has_ambition/has_plot [character]"
+		},
+		{
+			"text": "has_offmap_currency",
+			"displayText": "has_offmap_currency",
+			"description": "Whether the character has at least \"value\" currency in the specified \"offmap\" ID. [code] [code] [code] [code] [code] [code] [character]"
+		},
+		{
+			"text": "has_overseas_holdings",
+			"displayText": "has_overseas_holdings",
+			"description": " [character]"
+		},
+		{
+			"text": "has_owner",
+			"displayText": "has_owner",
+			"description": " [province]"
+		},
+		{
+			"text": "has_pentarchy",
+			"displayText": "has_pentarchy",
+			"description": "Checks for whether the associated religion has a pentarchy. Works with anything that has a religion [religion/character/province]"
+		},
+		{
+			"text": "has_plot",
+			"displayText": "has_plot",
+			"description": " [character]"
+		},
+		{
+			"text": "has_policy",
+			"displayText": "has_policy",
+			"description": "Checks if the scoped offmap power currently has the specified offmap policy (defined in /common/offmap_powers/policies). [code] [code] [offmap]"
+		},
+		{
+			"text": "has_quest",
+			"displayText": "has_quest",
+			"description": "Checks if the scoped character has a quest with the given quest_name. [character]"
+		},
+		{
+			"text": "has_raised_standing_troops",
+			"displayText": "has_raised_standing_troops",
+			"description": " [title]"
+		},
+		{
+			"text": "has_regent",
+			"displayText": "has_regent",
+			"description": " [character]"
+		},
+		{
+			"text": "has_regiments",
+			"displayText": "has_regiments",
+			"description": " [character]"
+		},
+		{
+			"text": "has_religion_feature",
+			"displayText": "has_religion_feature",
+			"description": "Checks if character religion has a specific feature [character]"
+		},
+		{
+			"text": "has_religion_features",
+			"displayText": "has_religion_features",
+			"description": "Detects if religion features are enabled in the current game (usually dependent on whether or not Holy Fury is active) [any]"
+		},
+		{
+			"text": "has_secret_religion",
+			"displayText": "has_secret_religion",
+			"description": "Checks if character secretly follows another religion [character]"
+		},
+		{
+			"text": "has_settlement_construction",
+			"displayText": "has_settlement_construction",
+			"description": "Checks if a holding is under construction in the province [code] [province]"
+		},
+		{
+			"text": "has_siege",
+			"displayText": "has_siege",
+			"description": "Holding is under siege. [title(holding)]"
+		},
+		{
+			"text": "has_status",
+			"displayText": "has_status",
+			"description": "Checks if the scoped offmap power currently has the specified offmap status modifier (defined in /common/offmap_powers/statuses). [code] [code] [code] [offmap]"
+		},
+		{
+			"text": "holding_type",
+			"displayText": "holding_type",
+			"description": "city / temple / castle / tribal / nomad / family_palace [title]"
+		},
+		{
+			"text": "hospital_has_any_building",
+			"displayText": "hospital_has_any_building",
+			"description": "Checks if the hospital of the province has any buildings. [province]"
+		},
+		{
+			"text": "hospital_has_building",
+			"displayText": "hospital_has_building",
+			"description": "Checks if a hospital has the specified building. [province]"
+		},
+		{
+			"text": "hospital_level",
+			"displayText": "hospital_level",
+			"description": "Checks if a province has at least the given hospital level. [province]"
+		},
+		{
+			"text": "holding_garrison_percent",
+			"displayText": "holding_garrison_percent",
+			"description": "Checks how full the holding's garrison is. 1 is 100%, 0 is 0%. [holding]"
+		},
+		{
+			"text": "holding_raisable_levy_percent",
+			"displayText": "holding_raisable_levy_percent",
+			"description": "Checks how full the holding's raisable levy is. 1 is 100%, 0 is 0%. [holding]"
+		},
+		{
+			"text": "holding_total_levy_percent",
+			"displayText": "holding_total_levy_percent",
+			"description": "Checks how full the holding's total levy (garrison + raisable) is. 1 is 100%, 0 is 0%. [holding]"
+		},
+		{
+			"text": "holds_favor_on",
+			"displayText": "holds_favor_on",
+			"description": "Checks if a character holds a favor toward another character. The reverse condition is owes_favor_to . [character]"
+		},
+		{
+			"text": "holy_order",
+			"displayText": "holy_order",
+			"description": " [character/title]"
+		},
+		{
+			"text": "immortal",
+			"displayText": "immortal",
+			"description": "Checks if the character has a trait with immortal = yes [character]"
+		},
+		{
+			"text": "immortal_age",
+			"displayText": "immortal_age",
+			"description": "Checks which age at which a character became immortal at. [character]"
+		},
+		{
+			"text": "imprisoned_days",
+			"displayText": "imprisoned_days",
+			"description": " [character]"
+		},
+		{
+			"text": "independent",
+			"displayText": "independent",
+			"description": " [character/title]"
+		},
+		{
+			"text": "infamy",
+			"displayText": "infamy",
+			"description": "Threat [character]"
+		},
+		{
+			"text": "intrigue",
+			"displayText": "intrigue",
+			"description": "A character's Intrigue stat. [character]"
+		},
+		{
+			"text": "in_battle",
+			"displayText": "in_battle",
+			"description": " [character]"
+		},
+		{
+			"text": "in_command",
+			"displayText": "in_command",
+			"description": "Character is leading troops. [character]"
+		},
+		{
+			"text": "in_faction",
+			"displayText": "in_faction",
+			"description": " [character]"
+		},
+		{
+			"text": "in_revolt",
+			"displayText": "in_revolt",
+			"description": " [character]"
+		},
+		{
+			"text": "in_siege",
+			"displayText": "in_siege",
+			"description": " [character]"
+		},
+		{
+			"text": "interested_in_society",
+			"displayText": "interested_in_society",
+			"description": "Check if the character is interested in the society with the given tag. [character]"
+		},
+		{
+			"text": "interested_in_society_of_character",
+			"displayText": "interested_in_society_of_character",
+			"description": "(2.8) Check if the character is interested in the society that the target character is a member of. [character]"
+		},
+		{
+			"text": "is_abroad",
+			"displayText": "is_abroad",
+			"description": "Valid if character is 'abroad' (not at liege's court) [character]"
+		},
+		{
+			"text": "is_adult",
+			"displayText": "is_adult",
+			"description": "Checks if the character is an adult. [character]"
+		},
+		{
+			"text": "is_alive",
+			"displayText": "is_alive",
+			"description": "If yes, will only affect alive characters [character]"
+		},
+		{
+			"text": "is_allied_with",
+			"displayText": "is_allied_with",
+			"description": "Checks for alliances and tributary relationships. Does not check for being temporary war allies. Expensive calculation, use with care [character]"
+		},
+		{
+			"text": "is_allowed_holding_type",
+			"displayText": "is_allowed_holding_type",
+			"description": "Checks if holding type is allowed by the government of specified character [title(holding)]"
+		},
+		{
+			"text": "is_allowed_to_loot",
+			"displayText": "is_allowed_to_loot",
+			"description": "Character can raid. [character]"
+		},
+		{
+			"text": "is_alternate_start",
+			"displayText": "is_alternate_start",
+			"description": "If the world is randomised/shattered. [any]"
+		},
+		{
+			"text": "is_ancestor_of",
+			"displayText": "is_ancestor_of",
+			"description": "(2.8) Checks if the scoped character is a progenitor of the target character's bloodline, within up to sixteen generations (for performance reasons). Expensive, so use with caution. [character]"
+		},
+		{
+			"text": "is_artifact_active",
+			"displayText": "is_artifact_active",
+			"description": "Checks if the scoped artifact is currently active, as defined by its active trigger. Artifacts without an active trigger will always be considered active, even if not owned, and artifacts with an active trigger and without an owner will never be considered active. [artifact]"
+		},
+		{
+			"text": "is_artifact_equipped",
+			"displayText": "is_artifact_equipped",
+			"description": "Checks if the scoped artifact is currently equipped by its owner. [artifact]"
+		},
+		{
+			"text": "is_artifact_same_type_as",
+			"displayText": "is_artifact_same_type_as",
+			"description": "Checks if the scoped artifact is the same as the given artifact [artifact]"
+		},
+		{
+			"text": "is_at_sea",
+			"displayText": "is_at_sea",
+			"description": " [character]"
+		},
+		{
+			"text": "is_attacker",
+			"displayText": "is_attacker",
+			"description": " [siege]"
+		},
+		{
+			"text": "is_aunt_uncle_of",
+			"displayText": "is_aunt_uncle_of",
+			"description": "(2.8) Checks if the current scoped character is the sibling of either of the target character's parents (i.e., one of the target character's parents' siblings, colloquially known as [https://www.urbandictionary.com/define.php?term=pibling \"piblings\"]). [character]"
+		},
+		{
+			"text": "is_betrothed",
+			"displayText": "is_betrothed",
+			"description": "If yes, will only affect betrothed characters [character]"
+		},
+		{
+			"text": "is_bloodline_founder_of",
+			"displayText": "is_bloodline_founder_of",
+			"description": "Returns true if current scope is the founder of RightHand-Side(RHS) scope . [character]"
+		},
+		{
+			"text": "is_bloodline_member_of",
+			"displayText": "is_bloodline_member_of",
+			"description": "Returns true if current scope is a member of RightHand-Side(RHS) scope . [character]"
+		},
+		{
+			"text": "is_capital",
+			"displayText": "is_capital",
+			"description": "If yes, will only affect the capital HOLDING [province/title]"
+		},
+		{
+			"text": "is_child_of",
+			"displayText": "is_child_of",
+			"description": "Checks if the scope is a child of another character [character]"
+		},
+		{
+			"text": "is_close_relative",
+			"displayText": "is_close_relative",
+			"description": "checks if the scope is a close relative of another character. This includes spouses, parents, children, siblings, grandparents, and grandchildren [character]"
+		},
+		{
+			"text": "is_conquered",
+			"displayText": "is_conquered",
+			"description": " [title]"
+		},
+		{
+			"text": "is_consort",
+			"displayText": "is_consort",
+			"description": "Checks if the scoped character is a concubine/consort of somebody: or a concubine/consort or the specified character [character]"
+		},
+		{
+			"text": "is_contested",
+			"displayText": "is_contested",
+			"description": "If title is already being contested in some form of Claim or Succession War [title]"
+		},
+		{
+			"text": "is_council_content",
+			"displayText": "is_council_content",
+			"description": "Checks whether the council is content or not. [character]"
+		},
+		{
+			"text": "is_councillor",
+			"displayText": "is_councillor",
+			"description": "Checks if character has a councillor job (chancellor, ...) [character]"
+		},
+		{
+			"text": "is_cousin_of",
+			"displayText": "is_cousin_of",
+			"description": "(2.8) True if the current scoped character is related to the target character by way of parental siblings. [character]"
+		},
+		{
+			"text": "is_crown_law_title",
+			"displayText": "is_crown_law_title",
+			"description": "Checks for titles that can have crown laws. [title]"
+		},
+		{
+			"text": "is_decision_allowedis_law_allowed",
+			"displayText": "is_decision_allowedis_law_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_law_allowed",
+			"displayText": "is_law_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_targetted_decision_allowed",
+			"displayText": "is_targetted_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_title_decision_allowed",
+			"displayText": "is_title_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_settlement_decision_allowed",
+			"displayText": "is_settlement_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_trade_post_decision_allowed",
+			"displayText": "is_trade_post_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_fort_decision_allowed",
+			"displayText": "is_fort_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_hospital_decision_allowed",
+			"displayText": "is_hospital_decision_allowed",
+			"description": "Checks if current scope matches the allow block of the given decision [?]"
+		},
+		{
+			"text": "is_decision_potential",
+			"displayText": "is_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_law_potential",
+			"displayText": "is_law_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_targetted_decision_potential",
+			"displayText": "is_targetted_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_title_decision_potential",
+			"displayText": "is_title_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_settlement_decision_potential",
+			"displayText": "is_settlement_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_trade_post_decision_potential",
+			"displayText": "is_trade_post_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_fort_decision_potential",
+			"displayText": "is_fort_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_hospital_decision_potential",
+			"displayText": "is_hospital_decision_potential",
+			"description": "Checks if current scope matches the potential block of the given decision [?]"
+		},
+		{
+			"text": "is_connected_to",
+			"displayText": "is_connected_to",
+			"description": "Checks if two provinces are connected via some realm's territory. Can be somewhat performance intensive, so use sparingly. [code] [province/title(county)]"
+		},
+		{
+			"text": "is_descendant_of",
+			"displayText": "is_descendant_of",
+			"description": "(2.8) Checks if the scoped character descends from the target character, within up to sixteen generations (for performance reasons). Expensive, so use with care. [character]"
+		},
+		{
+			"text": "is_dying",
+			"displayText": "is_dying",
+			"description": "Checks if character is about to die. Used for on_actions called just when character dies, such as on_chronicle_owner_change. [character]"
+		},
+		{
+			"text": "is_father",
+			"displayText": "is_father",
+			"description": " [character]"
+		},
+		{
+			"text": "is_father_real_father",
+			"displayText": "is_father_real_father",
+			"description": "Case of illegitimate bastards. [character]"
+		},
+		{
+			"text": "is_female",
+			"displayText": "is_female",
+			"description": "If yes, will only affect female characters. Can also be used as an event pre-trigger. [character]"
+		},
+		{
+			"text": "is_feudal",
+			"displayText": "is_feudal",
+			"description": "Checks if government is part of feudal_governments group. [character/title]"
+		},
+		{
+			"text": "is_foe",
+			"displayText": "is_foe",
+			"description": "Checks if the target character is_rival or has an opinion modifier with crime = yes toward the scoped character [character]"
+		},
+		{
+			"text": "is_former_lover",
+			"displayText": "is_former_lover",
+			"description": " [character]"
+		},
+		{
+			"text": "is_friend",
+			"displayText": "is_friend",
+			"description": "Checks if this character is a friend of the given character [character]"
+		},
+		{
+			"text": "is_government_potential",
+			"displayText": "is_government_potential",
+			"description": "Checks if a character matches the potential block of another government. [character]"
+		},
+		{
+			"text": "is_grandchild_of",
+			"displayText": "is_grandchild_of",
+			"description": "(2.8) Checks if the scoped character is the son or daughter of the target character's son or daughter. [character]"
+		},
+		{
+			"text": "is_grandparent_of",
+			"displayText": "is_grandparent_of",
+			"description": "(2.8) Checks if the scoped character is the father or mother of the target character's father or mother. [character]"
+		},
+		{
+			"text": "is_guardian",
+			"displayText": "is_guardian",
+			"description": " [character]"
+		},
+		{
+			"text": "is_hard_to_convert",
+			"displayText": "is_hard_to_convert",
+			"description": "Checks if the character or province's religion has the field hard_to_convert = yes [character/province]"
+		},
+		{
+			"text": "is_heir",
+			"displayText": "is_heir",
+			"description": "Checks if a character is first in the succession line of a title. [character]"
+		},
+		{
+			"text": "is_heresy_of",
+			"displayText": "is_heresy_of",
+			"description": " [character/province]"
+		},
+		{
+			"text": "is_heretic",
+			"displayText": "is_heretic",
+			"description": " [character/province]"
+		},
+		{
+			"text": "is_holy_site",
+			"displayText": "is_holy_site",
+			"description": "Checks if a barony is a holy site of the religion of specified character [code] is_holy_site = nestorian [title]"
+		},
+		{
+			"text": "is_ill",
+			"displayText": "is_ill",
+			"description": "Checks for traits with is_illness = yes [character]"
+		},
+		{
+			"text": "is_immune_to_pruning",
+			"displayText": "is_immune_to_pruning",
+			"description": "If yes, the character has been flagged with the set_immune_to_pruning command, or by the internal game logic, and will not be culled from AI courts or savegames to reduce file size/memory use. [character]"
+		},
+		{
+			"text": "is_in_same_unit_as",
+			"displayText": "is_in_same_unit_as",
+			"description": "Checks if the two characters are in the same unit. Does NOT check every unit on a side of a combat, unlike any/random_unit_leader. [character]"
+		},
+		{
+			"text": "is_in_society",
+			"displayText": "is_in_society",
+			"description": "Checks to see if a character is in a society or not, or if the character is in that particular society. [character]"
+		},
+		{
+			"text": "is_incapable",
+			"displayText": "is_incapable",
+			"description": "Checks if the character is incapable. With the addition of sick_incapable in RD, it's important to use this conditional instead of checking for trait = incapable. [character]"
+		},
+		{
+			"text": "is_indestructible",
+			"displayText": "is_indestructible",
+			"description": "Checks if the artifact is indestructible (has indestructible = yes ) [artifact]"
+		},
+		{
+			"text": "is_interested_in_any_society",
+			"displayText": "is_interested_in_any_society",
+			"description": "Checks if character is currently showing interest in a society or not. [character]"
+		},
+		{
+			"text": "is_ironman",
+			"displayText": "is_ironman",
+			"description": "Used in achievements.txt [character]"
+		},
+		{
+			"text": "is_island",
+			"displayText": "is_island",
+			"description": "Checks if the province exists in island_region.txt. [province]"
+		},
+		{
+			"text": "is_land",
+			"displayText": "is_land",
+			"description": "Checks that province is not a sea province [province]"
+		},
+		{
+			"text": "is_landed",
+			"displayText": "is_landed",
+			"description": "Checks that character owns a landed title. Note: landed characters are also rulers ( is_ruler = true) . [character]"
+		},
+		{
+			"text": "is_landed_title_allowed",
+			"displayText": "is_landed_title_allowed",
+			"description": "Checks if the character fulfills the allow conditions of a particular title. [character]"
+		},
+		{
+			"text": "is_landless_type_title",
+			"displayText": "is_landless_type_title",
+			"description": " [title]"
+		},
+		{
+			"text": "is_liege_of",
+			"displayText": "is_liege_of",
+			"description": "Check if the scoped character is a liege of the right hand side character. [character]"
+		},
+		{
+			"text": "is_liege_or_above",
+			"displayText": "is_liege_or_above",
+			"description": " [character/province]"
+		},
+		{
+			"text": "is_liege_or_above_of",
+			"displayText": "is_liege_or_above_of",
+			"description": "Checks that scoped character is a superior to the right hand side character in the top liege's realm. [character]"
+		},
+		{
+			"text": "is_located_in",
+			"displayText": "is_located_in",
+			"description": " [title]"
+		},
+		{
+			"text": "is_looting",
+			"displayText": "is_looting",
+			"description": " [character]"
+		},
+		{
+			"text": "is_looting_in",
+			"displayText": "is_looting_in",
+			"description": " [character]"
+		},
+		{
+			"text": "is_lover",
+			"displayText": "is_lover",
+			"description": "Checks if this character is a lover of the given character [character]"
+		},
+		{
+			"text": "is_lowborn",
+			"displayText": "is_lowborn",
+			"description": "Checks if the character is lowborn. Fixed in 2.8. (In versions prior to 2.8, it worked backwards: setting it to no will pick out characters that are actually lowborn.) Equivalent to dynasty = none [character]"
+		},
+		{
+			"text": "is_main_spouse",
+			"displayText": "is_main_spouse",
+			"description": "If yes, is primary wife. (Although written gender neutral, there are no multiple-husband polygamies in CK2.) [character]"
+		},
+		{
+			"text": "is_marriage_adult",
+			"displayText": "is_marriage_adult",
+			"description": "Checks if the character is old enough to marry, based on NDefines.NCharacter.AGE_OF_MARRIAGE_MALE and NDefines.NCharacter.AGE_OF_MARRIAGE_FEMALE . [character]"
+		},
+		{
+			"text": "is_married",
+			"displayText": "is_married",
+			"description": "Yes, will only affect married characters [character]"
+		},
+		{
+			"text": "is_married_matrilineally",
+			"displayText": "is_married_matrilineally",
+			"description": " [character]"
+		},
+		{
+			"text": "is_merchant_republic",
+			"displayText": "is_merchant_republic",
+			"description": "Checks if character is the doge of a merchant republic or if title is a merchant republic. [character/title]"
+		},
+		{
+			"text": "is_mother",
+			"displayText": "is_mother",
+			"description": " [character]"
+		},
+		{
+			"text": "is_multiplayer_host_character",
+			"displayText": "is_multiplayer_host_character",
+			"description": "Whether scoped character is the host in a multiplayer game. [character]"
+		},
+		{
+			"text": "is_navy",
+			"displayText": "is_navy",
+			"description": "Checks if a unit is a fleet. [unit]"
+		},
+		{
+			"text": "is_nibling_of",
+			"displayText": "is_nibling_of",
+			"description": "(2.8) Checks if the current scoped character is a niece/nephew of the target character (colloquially known by the gender-neutral [https://en.wiktionary.org/wiki/nibling \"nibling\"]). [character]"
+		},
+		{
+			"text": "is_nomadic",
+			"displayText": "is_nomadic",
+			"description": "Checks if character government is part of nomadic_governments group. [character]"
+		},
+		{
+			"text": "is_occupied",
+			"displayText": "is_occupied",
+			"description": "Checks if a barony or county is occupied by enemy troops. Does not work on duchy or above. [code] [title/province]"
+		},
+		{
+			"text": "is_offmap_governor",
+			"displayText": "is_offmap_governor",
+			"description": "Checks if this character is/is not a governor of an offmap power (bool), or of the specified offmap power (id). [code] [code] [code] [code] [code] [character]"
+		},
+		{
+			"text": "is_pregnant",
+			"displayText": "is_pregnant",
+			"description": "Evaluates true the moment a woman is pregnant (unlike the 2 month delay for the on_pregnancy action). [character]"
+		},
+		{
+			"text": "is_pretender",
+			"displayText": "is_pretender",
+			"description": "In title scope, checks vs ROOT character. [code] [code] [character/title]"
+		},
+		{
+			"text": "num_religion_provinces",
+			"displayText": "num_religion_provinces",
+			"description": "Number of provinces in the world with the religion associated with the current scope. Takes comparison operators. [any that have associated religion]"
+		},
+		{
+			"text": "num_fitting_characters_for_title",
+			"displayText": "num_fitting_characters_for_title",
+			"description": "Checks how many characters in ones court that would fit for a specific title [title]"
+		},
+		{
+			"text": "num_of_artifacts",
+			"displayText": "num_of_artifacts",
+			"description": "Checks if if scoped character has at least the given number of artifacts. [character]"
+		},
+		{
+			"text": "num_of_baron_titles",
+			"displayText": "num_of_baron_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_buildings",
+			"displayText": "num_of_buildings",
+			"description": " [title]"
+		},
+		{
+			"text": "num_of_children",
+			"displayText": "num_of_children",
+			"description": "Note: Both living and deceased children are counted. [character]"
+		},
+		{
+			"text": "num_of_claims",
+			"displayText": "num_of_claims",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_consorts",
+			"displayText": "num_of_consorts",
+			"description": "Checks the number of consorts/concubines a character has. [character]"
+		},
+		{
+			"text": "num_of_count_titles",
+			"displayText": "num_of_count_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_count_titles_in_realm",
+			"displayText": "num_of_count_titles_in_realm",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_duke_titles",
+			"displayText": "num_of_duke_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_dynasty_members",
+			"displayText": "num_of_dynasty_members",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_emperor_titles",
+			"displayText": "num_of_emperor_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_empty_holdings",
+			"displayText": "num_of_empty_holdings",
+			"description": "Note: settlements under construction, do not count as empty. [province]"
+		},
+		{
+			"text": "num_of_extra_landed_titles",
+			"displayText": "num_of_extra_landed_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_faction_backers",
+			"displayText": "num_of_faction_backers",
+			"description": "Checks the number of supporters for a given faction [code] [character]"
+		},
+		{
+			"text": "num_of_feuds",
+			"displayText": "num_of_feuds",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_friends",
+			"displayText": "num_of_friends",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_government_vassals",
+			"displayText": "num_of_government_vassals",
+			"description": "[code] [character]"
+		},
+		{
+			"text": "num_of_holy_sites",
+			"displayText": "num_of_holy_sites",
+			"description": "Number of holy sites controlled by the religion [character]"
+		},
+		{
+			"text": "num_of_hospitals",
+			"displayText": "num_of_hospitals",
+			"description": "Number of hospitals the character controls [character]"
+		},
+		{
+			"text": "num_of_hospitals_diff",
+			"displayText": "num_of_hospitals_diff",
+			"description": "Difference in number of hospitals controlled between 2 characters [character]"
+		},
+		{
+			"text": "num_of_king_titles",
+			"displayText": "num_of_king_titles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_lovers",
+			"displayText": "num_of_lovers",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_max_settlements",
+			"displayText": "num_of_max_settlements",
+			"description": "Checks the current number of constructed or constructible holding slots in a province [province]"
+		},
+		{
+			"text": "num_of_plot_backers",
+			"displayText": "num_of_plot_backers",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_prisoners",
+			"displayText": "num_of_prisoners",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_realm_counties",
+			"displayText": "num_of_realm_counties",
+			"description": "Scoped character controls at least N counties from specified title [character]"
+		},
+		{
+			"text": "num_of_rivals",
+			"displayText": "num_of_rivals",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_settlements",
+			"displayText": "num_of_settlements",
+			"description": "Number of baronies the province has (maximum 7) [province]"
+		},
+		{
+			"text": "num_of_society_members",
+			"displayText": "num_of_society_members",
+			"description": "(2.8) Number of members who are in the scoped society or scoped character's society. Supports 2.8 =, ==, and operators. [character/society]"
+		},
+		{
+			"text": "num_of_subrealm_castles",
+			"displayText": "num_of_subrealm_castles",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_subrealm_cities",
+			"displayText": "num_of_subrealm_cities",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_subrealm_empty_provinces",
+			"displayText": "num_of_subrealm_empty_provinces",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_subrealm_tribes",
+			"displayText": "num_of_subrealm_tribes",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_subrealm_temples",
+			"displayText": "num_of_subrealm_temples",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_spouses",
+			"displayText": "num_of_spouses",
+			"description": " [character]"
+		},
+		{
+			"text": "num_of_symptoms",
+			"displayText": "num_of_symptoms",
+			"description": "Number of traits with is_symptom = yes [character]"
+		},
+		{
+			"text": "num_of_titles",
+			"displayText": "num_of_titles",
+			"description": "Number of titles directly held by the character. Note that for this condition each County title is worth 2 while Barony, Duchy, Kingdom and Empire-tier titles are worth 1 each. [character]"
+		},
+		{
+			"text": "num_of_trade_posts",
+			"displayText": "num_of_trade_posts",
+			"description": "Number of trade posts [character]"
+		},
+		{
+			"text": "num_of_trade_post_diff",
+			"displayText": "num_of_trade_post_diff",
+			"description": "Difference of trade posts between 2 characters [code] [character]"
+		},
+		{
+			"text": "num_of_traits",
+			"displayText": "num_of_traits",
+			"description": "Number of traits [character]"
+		},
+		{
+			"text": "num_of_unique_dynasty_vassals",
+			"displayText": "num_of_unique_dynasty_vassals",
+			"description": "Number of vassals of different dynasties (excluding the dynasty of scoped character). [character]"
+		},
+		{
+			"text": "num_of_vassals",
+			"displayText": "num_of_vassals",
+			"description": "Number of direct vassals [character]"
+		},
+		{
+			"text": "num_title_realm_provs",
+			"displayText": "num_title_realm_provs",
+			"description": "Number of counties in ROOT's realm. [code] [title]"
+		},
+		{
+			"text": "num_traits",
+			"displayText": "num_traits",
+			"description": "Duplicate of num_of_traits [character]"
+		},
+		{
+			"text": "obedient",
+			"displayText": "obedient",
+			"description": "Checks if the scoped character is obedient to the target character, e.g. has an opinion modifier with obedient = yes toward the target character. [character]"
+		},
+		{
+			"text": "offmap_has_dislike",
+			"displayText": "offmap_has_dislike",
+			"description": "Checks whether the scoped offmap power has their current \"dislike\" assigned to the named scripted trigger. Note that in spite of \"dislike\" being negative, the vanilla triggers are shared between likes and dislikes, and therefore named in the positive (e.g., the current \"dis\"like\" may be \"likes_wealth\" -- do not use \"dislikes\"_wealth\"). [offmap]"
+		},
+		{
+			"text": "offmap_has_like",
+			"displayText": "offmap_has_like",
+			"description": "Checks whether the scoped offmap power has their current \"like\" assigned to the named scripted trigger. [offmap]"
+		},
+		{
+			"text": "opinion",
+			"displayText": "opinion",
+			"description": "Checks if the scope's opinion of \"who\" is at least this value [character]"
+		},
+		{
+			"text": "opinion_diff",
+			"displayText": "opinion_diff",
+			"description": "True if \"first\" target character has a higher opinion of the currently scoped character than \"second\" target character by at least \"value\" points. as_if_liege = yes also applies the liege-vassal opinion modifiers ( vassal_opinion , etc.) and is used in factions, to decide if a character would like someone better as liege than another one (and therefore would join a faction seeking to replace him). [character]"
+		},
+		{
+			"text": "opinion_levy_raised_days",
+			"displayText": "opinion_levy_raised_days",
+			"description": "Should be called inside a vassal's scope, and who should be the top liege. The condition is useless if the government/religion allows raising vassal troops without opinion penalties. [character]"
+		},
+		{
+			"text": "overlord_of",
+			"displayText": "overlord_of",
+			"description": " [character]"
+		},
+		{
+			"text": "over_max_demesne_size",
+			"displayText": "over_max_demesne_size",
+			"description": " [character]"
+		},
+		{
+			"text": "over_vassal_limit",
+			"displayText": "over_vassal_limit",
+			"description": " [character]"
+		},
+		{
+			"text": "owes_favor_to",
+			"displayText": "owes_favor_to",
+			"description": "Checks if a character owes a favor to another character. The reverse condition is holds_favor_on . [character]"
+		},
+		{
+			"text": "owns",
+			"displayText": "owns",
+			"description": " [character]"
+		},
+		{
+			"text": "owns_mercenary_units",
+			"displayText": "owns_mercenary_units",
+			"description": "Checks if character owns mercenary units [character]"
+		},
+		{
+			"text": "pacifist",
+			"displayText": "pacifist",
+			"description": " [character]"
+		},
+		{
+			"text": "pays_tribute_to",
+			"displayText": "pays_tribute_to",
+			"description": " [character]"
+		},
+		{
+			"text": "personal_opinion",
+			"displayText": "personal_opinion",
+			"description": "Similar to opinion, but does not take state diplomacy, laws or any other such state concerns into account [code] [code] [code] [code] [code] [code] [code] [character]"
+		},
+		{
+			"text": "province_id",
+			"displayText": "province_id",
+			"description": "Checks if the scoped province has given province ID. [province]"
+		},
+		{
+			"text": "quality",
+			"displayText": "quality",
+			"description": "Checks if if the quality of the scoped artifact compares correctly to the given value. All comparison operators are available ( =, >=). [artifact]"
+		},
+		{
+			"text": "race",
+			"displayText": "race",
+			"description": "Same as culture condition. Checks if a character's culture matches that of a specified culture or character. This is different from graphical_culure , i.e when comparing two cultures that have the same culturegfx, race still evaluates to false. [character]"
+		},
+		{
+			"text": "random",
+			"displayText": "random",
+			"description": "Chance of success is (100-N)%! [any]"
+		},
+		{
+			"text": "real_month_of_year",
+			"displayText": "real_month_of_year",
+			"description": "Checks for actual IRL month (contrary to month which checks it in-game). Ranges from 0 (January) to 11 (December) [any]"
+		},
+		{
+			"text": "real_tier",
+			"displayText": "real_tier",
+			"description": "Same as \"tier\" but ignores temporary titles [character/title]"
+		},
+		{
+			"text": "realm_character_percent",
+			"displayText": "realm_character_percent",
+			"description": "Returns true if the percentage of characters in the scoped character's realm fulfilling the condition is equal to or greater than the target. [character]"
+		},
+		{
+			"text": "realm_diplomacy",
+			"displayText": "realm_diplomacy",
+			"description": "State diplomacy. For personal attribute, see diplomacy . [character]"
+		},
+		{
+			"text": "realm_intrigue",
+			"displayText": "realm_intrigue",
+			"description": "State intrigue. For personal attribute, see intrigue . [character]"
+		},
+		{
+			"text": "realm_learning",
+			"displayText": "realm_learning",
+			"description": "State learning. For personal attribute, see learning . [character]"
+		},
+		{
+			"text": "realm_levies",
+			"displayText": "realm_levies",
+			"description": " [character]"
+		},
+		{
+			"text": "realm_levy_diff",
+			"displayText": "realm_levy_diff",
+			"description": " [character]"
+		},
+		{
+			"text": "realm_martial",
+			"displayText": "realm_martial",
+			"description": "State martial. For personal attribute, see martial . [character]"
+		},
+		{
+			"text": "realm_size",
+			"displayText": "realm_size",
+			"description": "Total number of landed titles in the realm [character]"
+		},
+		{
+			"text": "realm_stewardship",
+			"displayText": "realm_stewardship",
+			"description": "State stewardship. For personal attribute, see stewardship . [character]"
+		},
+		{
+			"text": "rebel",
+			"displayText": "rebel",
+			"description": " [character/title]"
+		},
+		{
+			"text": "region",
+			"displayText": "region",
+			"description": "Checks if scope belongs to a geographical region. [title,province]"
+		},
+		{
+			"text": "regional_percentage",
+			"displayText": "regional_percentage",
+			"description": "Checks if the percentage of provinces in a particular region meets a set of conditions [code] [any]"
+		},
+		{
+			"text": "relative_income_to_liege",
+			"displayText": "relative_income_to_liege",
+			"description": "Compares the income of character and of his liege [character]"
+		},
+		{
+			"text": "relative_power",
+			"displayText": "relative_power",
+			"description": "Check that currently scoped character has at least \"power\" percentage of \"whos power. [character]"
+		},
+		{
+			"text": "relative_power_including_allies_attacker",
+			"displayText": "relative_power_including_allies_attacker",
+			"description": "Check that currently scoped character (plus its potential allies in an offensive war) have at least \"power\" percentage of \"whos power. [code] [character]"
+		},
+		{
+			"text": "relative_power_including_allies_defender",
+			"displayText": "relative_power_including_allies_defender",
+			"description": "Check that currently scoped character (plus its potential allies in a defensive war) have at least \"power\" percentage of \"whos power. [code] [character]"
+		},
+		{
+			"text": "relative_power_to_liege",
+			"displayText": "relative_power_to_liege",
+			"description": " [character]"
+		},
+		{
+			"text": "relative_realm_size",
+			"displayText": "relative_realm_size",
+			"description": "(2.8) Compares the realm size of the scoped character with the character specified by \"who\". Can use comparison operators ( =, >, =, == ). [code] [character]"
+		},
+		{
+			"text": "religion",
+			"displayText": "religion",
+			"description": "Checks if character/province has the given religion [character/province]"
+		},
+		{
+			"text": "religion_allows_female_temple_holders",
+			"displayText": "religion_allows_female_temple_holders",
+			"description": "Checks religion flag allows_female_temple_holders [character]"
+		},
+		{
+			"text": "religion_allows_male_temple_holders",
+			"displayText": "religion_allows_male_temple_holders",
+			"description": "Checks religion flag allows_male_temple_holders [character]"
+		},
+		{
+			"text": "religion_authority",
+			"displayText": "religion_authority",
+			"description": "Ranges from 0 to 1 [character/province]"
+		},
+		{
+			"text": "religion_group",
+			"displayText": "religion_group",
+			"description": "Checks if character's/province's religion belongs to the given religion group [character/province]"
+		},
+		{
+			"text": "republic_total_num_of_trade_posts",
+			"displayText": "republic_total_num_of_trade_posts",
+			"description": " [character]"
+		},
+		{
+			"text": "reverse_clan_opinion",
+			"displayText": "reverse_clan_opinion",
+			"description": "[code] [character]"
+		},
+		{
+			"text": "reverse_has_opinion_modifier",
+			"displayText": "reverse_has_opinion_modifier",
+			"description": "Checks if 'who' character has the given opinion modifier towards scoped character [character]"
+		},
+		{
+			"text": "reverse_has_truce",
+			"displayText": "reverse_has_truce",
+			"description": " [character]"
+		},
+		{
+			"text": "reverse_opinion",
+			"displayText": "reverse_opinion",
+			"description": "Checks if who's opinion of the scope is at least value. new can be used to reference the new_character scope. [character/new]"
+		},
+		{
+			"text": "reverse_personal_opinion",
+			"displayText": "reverse_personal_opinion",
+			"description": "Similar to reverse_opinion, but does not take state diplomacy, laws or any other such state concerns into account [character]"
+		},
+		{
+			"text": "reverse_personal_opinion_diff",
+			"displayText": "reverse_personal_opinion_diff",
+			"description": "Does not take state diplomacy, laws or any other such state concerns into account [character]"
+		},
+		{
+			"text": "revolt_risk",
+			"displayText": "revolt_risk",
+			"description": " [province]"
+		},
+		{
+			"text": "rightful_religious_head",
+			"displayText": "rightful_religious_head",
+			"description": " [character]"
+		},
+		{
+			"text": "risks_minor_clan_rising",
+			"displayText": "risks_minor_clan_rising",
+			"description": " [character]"
+		},
+		{
+			"text": "ruled_years",
+			"displayText": "ruled_years",
+			"description": " [character/title]"
+		},
+		{
+			"text": "same_guardian",
+			"displayText": "same_guardian",
+			"description": " [character]"
+		},
+		{
+			"text": "same_liege",
+			"displayText": "same_liege",
+			"description": " [character]"
+		},
+		{
+			"text": "same_realm",
+			"displayText": "same_realm",
+			"description": "[code] [character/title]"
+		},
+		{
+			"text": "same_sex",
+			"displayText": "same_sex",
+			"description": "Checks if two characters have same sex. [character]"
+		},
+		{
+			"text": "same_regnal_name",
+			"displayText": "same_regnal_name",
+			"description": "Checks if two characters have the same regnal name for numbering purposes. Regnal names are currently defined as having the same first first name (E.G., \"Gustav\" and \"Gustav Adolf\" are the same regnal name), or the same cultural first first name (E.G., \"Alfr_Alf\" and \"Alf_Alf\" are the same regnal name). [character]"
+		},
+		{
+			"text": "same_society_as",
+			"displayText": "same_society_as",
+			"description": "Checks if scope character is in the same society as target character. [character]"
+		},
+		{
+			"text": "scaled_wealth",
+			"displayText": "scaled_wealth",
+			"description": "Check if character has the given wealth based on percentage of yearly income. Before 2.8, the clause syntax is not available. [character]"
+		},
+		{
+			"text": "score",
+			"displayText": "score",
+			"description": "Current score of the player [character]"
+		},
+		{
+			"text": "secret_religion",
+			"displayText": "secret_religion",
+			"description": "Checks if character secretly follows the given religion [character]"
+		},
+		{
+			"text": "secret_religion_group",
+			"displayText": "secret_religion_group",
+			"description": "Checks if character secretly follows a religion in the given religion group [character]"
+		},
+		{
+			"text": "shares_any_bloodline_with",
+			"displayText": "shares_any_bloodline_with",
+			"description": "Returns true is both characters have at least one bloodline in common [character]"
+		},
+		{
+			"text": "shares_realm_border_with",
+			"displayText": "shares_realm_border_with",
+			"description": "(2.8) Checks if any province in your realm (everything under your titles) borders any province in their realm. [character]"
+		},
+		{
+			"text": "sibling",
+			"displayText": "sibling",
+			"description": " [character]"
+		},
+		{
+			"text": "society_can_rank_down",
+			"displayText": "society_can_rank_down",
+			"description": "Checks if the character can rank down within their society [character]"
+		},
+		{
+			"text": "society_can_rank_up",
+			"displayText": "society_can_rank_up",
+			"description": "Checks if the character can rank up within their society [character]"
+		},
+		{
+			"text": "society_currency",
+			"displayText": "society_currency",
+			"description": "Checks if character has the given number of society points. Can add a scaled_by_influence parameter to scale by society influence, going from a 70% reduction when the society is at 100% influence and going linearly to a 0% reduction at 0% influence [character]"
+		},
+		{
+			"text": "society_has_active_progress",
+			"displayText": "society_has_active_progress",
+			"description": "Checks if the society currently has an ongoing progress counter. [society]"
+		},
+		{
+			"text": "society_has_members",
+			"displayText": "society_has_members",
+			"description": "Checks if the society has any members. [society]"
+		},
+		{
+			"text": "society_influence",
+			"displayText": "society_influence",
+			"description": "Checks if a given society's influence compares to the given number. If no society name is given, it will use either the society in the current scope, or the society of the character in the current scope. If no society name is given, and the current scope is neither a society nor a character, it will always return false. [society/character/any]"
+		},
+		{
+			"text": "society_is_active",
+			"displayText": "society_is_active",
+			"description": "Checks if the society's active trigger is true. [society]"
+		},
+		{
+			"text": "society_is_criminal",
+			"displayText": "society_is_criminal",
+			"description": "Checks if character's society is criminal or not. [character]"
+		},
+		{
+			"text": "society_is_devil_worshiper",
+			"displayText": "society_is_devil_worshiper",
+			"description": "Checks if character's society is a devil worshiping society or not. [character]"
+		},
+		{
+			"text": "society_member_of",
+			"displayText": "society_member_of",
+			"description": "Checks if character belongs to the given society [character]"
+		},
+		{
+			"text": "society_progress",
+			"displayText": "society_progress",
+			"description": "Checks the society's current progress. Takes comparison operators. [society]"
+		},
+		{
+			"text": "society_rank",
+			"displayText": "society_rank",
+			"description": "Checks if character's rank compares correctly to the value or character given. Works with all comparison operators ( =, >=). Can use clause to additionally check if character belongs to named society. [character/int/clause]"
+		},
+		{
+			"text": "start_date",
+			"displayText": "start_date",
+			"description": "Check the initial start date of current game. [any]"
+		},
+		{
+			"text": "stewardship",
+			"displayText": "stewardship",
+			"description": "A character's Stewardship attribute. For state value, see realm_stewardship [character]"
+		},
+		{
+			"text": "supply_limit",
+			"displayText": "supply_limit",
+			"description": "Compares the supply in the province for a given character and their leader against a value. The leader defaults to the given character unless specified. WARNING: Syntax untested yet, seems weird. [code] [province]"
+		},
+		{
+			"text": "supported_checksum",
+			"displayText": "supported_checksum",
+			"description": "Checks to see if current checksum matches at least one supported checksum in the .mod files of any active mods (defined by supported_checksums = { ABCD EFGH } field). [any]"
+		},
+		{
+			"text": "symptom",
+			"displayText": "symptom",
+			"description": " [character]"
+		},
+		{
+			"text": "TECH_LIGHT_INFANTRY",
+			"displayText": "TECH_LIGHT_INFANTRY",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_HEAVY_INFANTRY",
+			"displayText": "TECH_HEAVY_INFANTRY",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_CAVALRY",
+			"displayText": "TECH_CAVALRY",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_SIEGE_EQUIPMENT",
+			"displayText": "TECH_SIEGE_EQUIPMENT",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_SHIPBUILDING",
+			"displayText": "TECH_SHIPBUILDING",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_MILITARY_ORGANIZATION",
+			"displayText": "TECH_MILITARY_ORGANIZATION",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_CASTLE_INFRASTRUCTURE",
+			"displayText": "TECH_CASTLE_INFRASTRUCTURE",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_TOWN_INFRASTRUCTURE",
+			"displayText": "TECH_TOWN_INFRASTRUCTURE",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_CHURCH_INFRASTRUCTURE",
+			"displayText": "TECH_CHURCH_INFRASTRUCTURE",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_IMPROVED_KEEPS",
+			"displayText": "TECH_IMPROVED_KEEPS",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_TRADE_PRACTICES",
+			"displayText": "TECH_TRADE_PRACTICES",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_CONSTRUCTION",
+			"displayText": "TECH_CONSTRUCTION",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_NOBLE_CUSTOMS",
+			"displayText": "TECH_NOBLE_CUSTOMS",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_POPULAR_CUSTOMS",
+			"displayText": "TECH_POPULAR_CUSTOMS",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_RELIGIOUS_CUSTOMS",
+			"displayText": "TECH_RELIGIOUS_CUSTOMS",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_MAJESTY",
+			"displayText": "TECH_MAJESTY",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_TOLERANCE",
+			"displayText": "TECH_TOLERANCE",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "TECH_LEGALISM",
+			"displayText": "TECH_LEGALISM",
+			"description": "Check whether the current holding or province has at least this level of technology in a particular tech category. [province, holding]"
+		},
+		{
+			"text": "technology_can_spread",
+			"displayText": "technology_can_spread",
+			"description": "Check whether technology can spread in the province. [province]"
+		},
+		{
+			"text": "temporary",
+			"displayText": "temporary",
+			"description": "Check if title is temporary one (revolt, claimant adventurer, ...) [title]"
+		},
+		{
+			"text": "terrain",
+			"displayText": "terrain",
+			"description": "Values: forest, hills, mountain, plains, farmlands, steppe, desert, jungle, arctic [province]"
+		},
+		{
+			"text": "their_opinion",
+			"displayText": "their_opinion",
+			"description": " [character]"
+		},
+		{
+			"text": "tier",
+			"displayText": "tier",
+			"description": "Values: baron, count, duke, king, emperor [character/title]"
+		},
+		{
+			"text": "title",
+			"displayText": "title",
+			"description": " [character/title]"
+		},
+		{
+			"text": "total_claims",
+			"displayText": "total_claims",
+			"description": " [character]"
+		},
+		{
+			"text": "total_years_played",
+			"displayText": "total_years_played",
+			"description": "Number of years since beginning of current game [Any]"
+		},
+		{
+			"text": "trade_post_has_building",
+			"displayText": "trade_post_has_building",
+			"description": "Checks if a trade post has the specified building. [province]"
+		},
+		{
+			"text": "trade_post_has_any_building",
+			"displayText": "trade_post_has_any_building",
+			"description": "Checks if a trade post has at least 1 building. [province]"
+		},
+		{
+			"text": "trade_route",
+			"displayText": "trade_route",
+			"description": "Checks if a province is on the specified trade route. [province]"
+		},
+		{
+			"text": "trade_route_control",
+			"displayText": "trade_route_control",
+			"description": "(2.8) Checks the amount of control of the scoped character (others?) over the specified trade route's wealth, provinces, trade posts, or trade post locations. [code] [character]"
+		},
+		{
+			"text": "trait",
+			"displayText": "trait",
+			"description": "Checks if the character has this trait [character]"
+		},
+		{
+			"text": "treasury",
+			"displayText": "treasury",
+			"description": " [character]"
+		},
+		{
+			"text": "true_religion",
+			"displayText": "true_religion",
+			"description": "If the character has a secret religion, checks if character secretly follows the given religion, otherwise checks if the character publicly follows the given religion [character]"
+		},
+		{
+			"text": "true_religion_group",
+			"displayText": "true_religion_group",
+			"description": "If the character has a secret religion, checks if character secretly follows a religion in the given religion group, otherwise checks if the character publicly follows a religion in the given religion group [character]"
+		},
+		{
+			"text": "troops",
+			"displayText": "troops",
+			"description": " [siege]"
+		},
+		{
+			"text": "unit_is_in_combat",
+			"displayText": "unit_is_in_combat",
+			"description": "Checks if the unit is in combat. [unit]"
+		},
+		{
+			"text": "unused_manpower",
+			"displayText": "unused_manpower",
+			"description": " [character]"
+		},
+		{
+			"text": "uses_decadence",
+			"displayText": "uses_decadence",
+			"description": "Character has decadence mechanic via religion/government. [character]"
+		},
+		{
+			"text": "using_cb",
+			"displayText": "using_cb",
+			"description": " [war]"
+		},
+		{
+			"text": "vassal_of",
+			"displayText": "vassal_of",
+			"description": "Check if the scoped character is a direct vassal of the right hand side character. [character]"
+		},
+		{
+			"text": "war",
+			"displayText": "war",
+			"description": "Checks if the character is in war [character]"
+		},
+		{
+			"text": "war_participation",
+			"displayText": "war_participation",
+			"description": " [war]"
+		},
+		{
+			"text": "war_score",
+			"displayText": "war_score",
+			"description": " [war]"
+		},
+		{
+			"text": "war_title",
+			"displayText": "war_title",
+			"description": " [war]"
+		},
+		{
+			"text": "war_with",
+			"displayText": "war_with",
+			"description": "Returns true if people are hostile due to raiding or if their armies are hostile because of a personal, liege or third party war. [character]"
+		},
+		{
+			"text": "was_conceived_a_bastard",
+			"displayText": "was_conceived_a_bastard",
+			"description": " [character]"
+		},
+		{
+			"text": "wealth",
+			"displayText": "wealth",
+			"description": "The minimum amount of gold this character should have [character]"
+		},
+		{
+			"text": "will_liege_enforce_peace",
+			"displayText": "will_liege_enforce_peace",
+			"description": "See also has_liege_enforced_peace [character]"
+		},
+		{
+			"text": "would_be_heir_under_law",
+			"displayText": "would_be_heir_under_law",
+			"description": " [title]"
+		},
+		{
+			"text": "year",
+			"displayText": "year",
+			"description": "Returns the current year. [any]"
+		},
+		{
+			"text": "year_of_birth",
+			"displayText": "year_of_birth",
+			"description": "Checks if the character was born in this year or later [character]"
+		},
+		{
+			"text": "yearly_income",
+			"displayText": "yearly_income",
+			"description": " [character/title (holding)]"
+		}
+	],
+	"equal": [
+	],
+	"bracket": [
+	]
 }
