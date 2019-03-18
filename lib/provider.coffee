@@ -1,11 +1,16 @@
-GENERAL   = require('../dictionary/general.json')
-EFFECT    = require('../dictionary/effect.json')
-CONDITION = require('../dictionary/condition.json')
-MODIFIER  = require('../dictionary/modifier.json')
-SCOPE     = require('../dictionary/scope.json')
-COUNTRY   = require('../dictionary/country.json')
-PROVINCE  = require('../dictionary/province.json')
-WIKIURL   = 'https://ck2.paradoxwikis.com/'
+BUILDING   = require('../dictionary/building.json')
+CASUSBELLI = require('../dictionary/casus_belli.json')
+CONDITION  = require('../dictionary/condition.json')
+CULTURE    = require('../dictionary/culture.json')
+DECISION   = require('../dictionary/decision.json')
+GENERAL    = require('../dictionary/general.json')
+GOVERNMENT = require('../dictionary/government.json')
+MODIFIER   = require('../dictionary/modifier.json')
+OBJECTIVE  = require('../dictionary/objective.json')
+RELIGION   = require('../dictionary/religion.json')
+SCOPE      = require('../dictionary/scope.json')
+TRAIT      = require('../dictionary/trait.json')
+WIKIURL    = 'https://ck2.paradoxwikis.com/'
 
 
 # mode
@@ -29,28 +34,39 @@ module.exports =
   getSuggestions: ({editor, bufferPosition, scopeDescriptor, prefix}) ->
 
     completions = []
-    completions = @searchText(0, prefix, completions, GENERAL  , ''         , '')
-    completions = @searchText(0, prefix, completions, EFFECT   , 'effect'   , 'Commands')
-    completions = @searchText(0, prefix, completions, CONDITION, 'condition', 'Conditions')
-    completions = @searchText(0, prefix, completions, MODIFIER , 'modifier' , 'Modifier_list')
-    completions = @searchText(0, prefix, completions, SCOPE    , 'scope'    , 'Scopes')
+    completions = @searchText(0, prefix, completions, GENERAL   , ''           , '')
+    completions = @searchText(0, prefix, completions, BUILDING  , 'building'   , 'Building_modding')
+    completions = @searchText(0, prefix, completions, CASUSBELLI, 'casus belli', 'Casus_Belli_modding')
+    completions = @searchText(0, prefix, completions, CONDITION , 'condition'  , 'Conditions')
+    completions = @searchText(0, prefix, completions, CULTURE   , 'culture'    , 'Culture_modding')
+    completions = @searchText(0, prefix, completions, DECISION  , 'decision'   , 'Decision_modding#Targeted_decisions')
+    completions = @searchText(0, prefix, completions, GOVERNMENT, 'government' , 'Government_modding')
+    completions = @searchText(0, prefix, completions, MODIFIER  , 'modifier'   , 'Modifiers')
+    completions = @searchText(0, prefix, completions, OBJECTIVE , 'objective'  , 'Objective_modding')
+    completions = @searchText(0, prefix, completions, RELIGION  , 'religion'   , 'Religion_modding')
+    completions = @searchText(0, prefix, completions, SCOPE     , 'scope'      , 'Scopes')
+    completions = @searchText(0, prefix, completions, TRAIT     , 'trait'      , 'Trait_modding')
 
-    if atom.config.get('autocomplete-eu4.includeloc') < 2
-
-      completions = @searchText(1, prefix, completions, COUNTRY , 'country' , 'Countries')
-      completions = @searchText(1, prefix, completions, PROVINCE, 'province', 'Lists_of_provinces')
+#   if atom.config.get('autocomplete-eu4.includeloc') < 2
+#     Proper names such as locations will be here.
 
     if atom.config.get('autocomplete-eu4.includedesc')
 
-      completions = @searchText(2, prefix, completions, GENERAL  , ''         , '')
-      completions = @searchText(2, prefix, completions, EFFECT   , 'effect'   , 'Commands')
-      completions = @searchText(2, prefix, completions, CONDITION, 'condition', 'Conditions')
-      completions = @searchText(2, prefix, completions, MODIFIER , 'modifier' , 'Modifier_list')
-      completions = @searchText(2, prefix, completions, SCOPE    , 'scope'    , 'Scopes')
+      completions = @searchText(2, prefix, completions, GENERAL   , ''           , '')
+      completions = @searchText(2, prefix, completions, BUILDING  , 'building'   , 'Building_modding')
+      completions = @searchText(2, prefix, completions, CASUSBELLI, 'casus belli', 'Casus_Belli_modding')
+      completions = @searchText(2, prefix, completions, CONDITION , 'condition'  , 'Conditions')
+      completions = @searchText(2, prefix, completions, CULTURE   , 'culture'    , 'Culture_modding')
+      completions = @searchText(2, prefix, completions, DECISION  , 'decision'   , 'Decision_modding#Targeted_decisions')
+      completions = @searchText(2, prefix, completions, GOVERNMENT, 'government' , 'Government_modding')
+      completions = @searchText(2, prefix, completions, MODIFIER  , 'modifier'   , 'Modifiers')
+      completions = @searchText(2, prefix, completions, OBJECTIVE , 'objective'  , 'Objective_modding')
+      completions = @searchText(2, prefix, completions, RELIGION  , 'religion'   , 'Religion_modding')
+      completions = @searchText(2, prefix, completions, SCOPE     , 'scope'      , 'Scopes')
+      completions = @searchText(2, prefix, completions, TRAIT     , 'trait'      , 'Trait_modding')
 
-      if atom.config.get('autocomplete-eu4.includeloc') < 2
-
-        completions = @searchText(3, prefix, completions, COUNTRY  , 'country' , 'Countries')
+#     if atom.config.get('autocomplete-eu4.includeloc') < 2
+#       Proper names such as locations will be here.
 
     completions.sort(@compareCompletions)
 

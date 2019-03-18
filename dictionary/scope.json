@@ -1321,8 +1321,6 @@
 			"description": "Scopes to any bloodline owned by the character [Character]"
 		}
 	],
-	"equal": [
-	],
-	"bracket": [
-	]
+	"equal": [],
+	"bracket": []
 }
